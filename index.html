@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ragas & Their Rasas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<header>
+  <div class="header-ornament">॥ स्वर • राग • रस ॥</div>
+  <h1>Ragas &amp; Their <em>Rasas</em></h1>
+  <p class="subtitle">A compendium of Hindustani classical ragas and their emotional essences</p>
+  <div class="divider"></div>
+</header>
+
+<div class="layout">
+
+<div class="main-content">
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search" placeholder="Search raga, thaat, rasa, season..." />
+    </div>
+    <button class="filter-toggle-btn" id="filter-toggle">◈ Filters</button>
+  </div>
+
+  <div class="active-chips" id="active-chips"></div>
+
+  <div class="stats" id="stats">Showing all ragas</div>
+
+  <div class="table-wrap">
+  <table id="raga-table">
+    <thead>
+      <tr>
+        <th data-col="0">Raga <span class="sort-arrow">↕</span></th>
+        <th data-col="1">Thaat <span class="sort-arrow">↕</span></th>
+        <th data-col="2">Time of Day <span class="sort-arrow">↕</span></th>
+        <th data-col="3">Season <span class="sort-arrow">↕</span></th>
+        <th data-col="4">Primary Rasa(s) <span class="sort-arrow">↕</span></th>
+        <th data-col="5">Character</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+  </table>
+</div>
+</div><!-- /.main-content -->
+
+<div class="sidebar" id="sidebar">
+<div class="filter-panel" id="filter-panel">
+  <div class="filter-section">
+    <div class="filter-section-label">Rasa</div>
+    <div class="filter-chips" id="chips-rasa">
+      <button class="fchip" data-group="rasa" data-value="Shringar">Shringar</button>
+      <button class="fchip" data-group="rasa" data-value="Karuna">Karuna</button>
+      <button class="fchip" data-group="rasa" data-value="Shanta">Shanta</button>
+      <button class="fchip" data-group="rasa" data-value="Raudra">Raudra</button>
+      <button class="fchip" data-group="rasa" data-value="Veer">Veer</button>
+      <button class="fchip" data-group="rasa" data-value="Adbhuta">Adbhuta</button>
+      <button class="fchip" data-group="rasa" data-value="Hasya">Hasya</button>
+      <button class="fchip" data-group="rasa" data-value="Bhayanaka">Bhayanaka</button>
+    </div>
+  </div>
+  <div class="filter-section">
+    <div class="filter-section-label">Time of Day</div>
+    <div class="filter-chips" id="chips-time">
+      <button class="fchip" data-group="time" data-value="Pre-dawn">Pre-dawn</button>
+      <button class="fchip" data-group="time" data-value="Dawn">Dawn</button>
+      <button class="fchip" data-group="time" data-value="Morning">Morning</button>
+      <button class="fchip" data-group="time" data-value="Afternoon">Afternoon</button>
+      <button class="fchip" data-group="time" data-value="Evening">Evening</button>
+      <button class="fchip" data-group="time" data-value="Sunset">Sunset</button>
+      <button class="fchip" data-group="time" data-value="Night">Night</button>
+      <button class="fchip" data-group="time" data-value="Late night">Late night</button>
+      <button class="fchip" data-group="time" data-value="Any">Any time</button>
+    </div>
+  </div>
+  <div class="filter-section">
+    <div class="filter-section-label">Season</div>
+    <div class="filter-chips" id="chips-season">
+      <button class="fchip" data-group="season" data-value="Spring">Spring</button>
+      <button class="fchip" data-group="season" data-value="Summer">Summer</button>
+      <button class="fchip" data-group="season" data-value="Monsoon">Monsoon</button>
+      <button class="fchip" data-group="season" data-value="Autumn">Autumn</button>
+      <button class="fchip" data-group="season" data-value="Winter">Winter</button>
+      <button class="fchip" data-group="season" data-value="Any">Any season</button>
+    </div>
+  </div>
+  <div class="filter-section">
+    <div class="filter-section-label">Thaat</div>
+    <div class="filter-chips" id="chips-thaat">
+      <button class="fchip" data-group="thaat" data-value="Kalyan">Kalyan</button>
+      <button class="fchip" data-group="thaat" data-value="Bilawal">Bilawal</button>
+      <button class="fchip" data-group="thaat" data-value="Khamaj">Khamaj</button>
+      <button class="fchip" data-group="thaat" data-value="Bhairav">Bhairav</button>
+      <button class="fchip" data-group="thaat" data-value="Bhairavi">Bhairavi</button>
+      <button class="fchip" data-group="thaat" data-value="Kafi">Kafi</button>
+      <button class="fchip" data-group="thaat" data-value="Asavari">Asavari</button>
+      <button class="fchip" data-group="thaat" data-value="Todi">Todi</button>
+      <button class="fchip" data-group="thaat" data-value="Purvi">Purvi</button>
+      <button class="fchip" data-group="thaat" data-value="Marwa">Marwa</button>
+    </div>
+  </div>
+  <div class="filter-panel-footer">
+    <button class="filter-reset-btn" id="reset-btn">✕ Clear all filters</button>
+  </div>
+</div>
+</div><!-- /.sidebar -->
+
+</div><!-- /.layout -->
+
+<div class="legend">
+  <h3>Navarasas — The Nine Emotional Essences</h3>
+  <div class="legend-grid">
+    <div class="legend-item"><div class="legend-dot" style="background:#e080b0"></div> Shringar — Love &amp; Beauty</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8898e0"></div> Karuna — Compassion &amp; Pathos</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#80c080"></div> Shanta — Peace &amp; Serenity</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#e07060"></div> Raudra — Fury &amp; Ferocity</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#e09840"></div> Veer — Heroism &amp; Courage</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#b080e0"></div> Adbhuta — Wonder &amp; Mystery</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#d0b050"></div> Hasya — Joy &amp; Humor</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#50b0a0"></div> Bhayanaka — Fear &amp; Dread</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#909090"></div> Bibhatsa — Disgust &amp; Aversion</div>
+  </div>
+</div>
+
+<footer>
+  Hindustani Classical Music — Raga Compendium &nbsp;·&nbsp; Rasas per Bharata Muni's Natyashastra
+</footer>
+
+<div id="overlay"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
