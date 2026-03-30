@@ -1,0 +1,17 @@
+(function () {
+  const links = [
+    { href: 'index.html',  label: 'Ragas' },
+    { href: 'rasas.html',  label: 'Rasas' },
+    { href: 'thaats.html', label: 'Thaats' },
+  ];
+
+  const current = location.pathname.split('/').pop() || 'index.html';
+
+  const nav = document.createElement('nav');
+  nav.className = 'site-nav';
+  nav.innerHTML = links.map(l =>
+    `<a href="${l.href}" class="nav-link${current === l.href ? ' active' : ''}">${l.label}</a>`
+  ).join('<span class="nav-sep">·</span>');
+
+  document.currentScript.insertAdjacentElement('afterend', nav);
+}());
