@@ -253,6 +253,19 @@ h1 em {
   background: rgba(201,168,76,0.1);
 }
 
+.fchip[data-group="season"] { border-color: currentColor; opacity: 0.6; }
+.fchip[data-group="season"]:hover { opacity: 0.9; }
+.fchip[data-group="season"].active { border-color: currentColor; background: transparent; opacity: 1; }
+
+.fchip.r-shringar.active  { border-color: rgba(224,128,176,0.7); color: #e080b0; background: rgba(224,128,176,0.22); }
+.fchip.r-karuna.active    { border-color: rgba(136,152,224,0.7); color: #8898e0; background: rgba(136,152,224,0.22); }
+.fchip.r-shanta.active    { border-color: rgba(128,192,128,0.7); color: #80c080; background: rgba(128,192,128,0.22); }
+.fchip.r-raudra.active    { border-color: rgba(224,112, 96,0.7); color: #e07060; background: rgba(224,112, 96,0.22); }
+.fchip.r-veer.active      { border-color: rgba(224,152, 64,0.7); color: #e09840; background: rgba(224,152, 64,0.22); }
+.fchip.r-adbhuta.active   { border-color: rgba(176,128,224,0.7); color: #b080e0; background: rgba(176,128,224,0.22); }
+.fchip.r-hasya.active     { border-color: rgba(208,176, 80,0.7); color: #d0b050; background: rgba(208,176, 80,0.22); }
+.fchip.r-bhayanaka.active { border-color: rgba( 80,176,160,0.7); color: #50b0a0; background: rgba( 80,176,160,0.22); }
+
 .filter-panel-footer {
   margin-top: 20px;
   padding-top: 20px;
