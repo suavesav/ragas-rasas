@@ -773,7 +773,6 @@ footer {
   #raga-table th:nth-child(n+2),
   #raga-table td:nth-child(n+2) { display: none; }
 
-  #raga-table td:first-child { width: 100%; display: block; }
 
   .raga-alt { display: none; }
 
@@ -790,8 +789,11 @@ footer {
     margin-top: 4px;
   }
 
-  /* Tighten row padding */
-  #raga-table td { padding: 10px 12px; }
+  /* Bleed table to screen edges */
+  .table-wrap { width: 100vw; margin-left: -16px; overflow-x: visible; }
+
+  /* Tighten row padding, match the bleed offset */
+  #raga-table td { padding: 10px 16px; }
   #raga-table tr.main-row { height: auto; }
 
   /* Search bar: prevent filter button overflow */
