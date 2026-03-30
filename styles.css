@@ -789,17 +789,19 @@ footer {
     margin-top: 4px;
   }
 
-  /* Bleed table to screen edges */
-  .table-wrap { width: 100vw; margin-left: -16px; overflow-x: visible; }
+  /* Bleed table to screen edges; clip overflow so body doesn't expand */
+  body { overflow-x: hidden; }
+  .table-wrap { width: 100vw; margin-left: -16px; }
 
   /* Tighten row padding, match the bleed offset */
   #raga-table td { padding: 10px 16px; }
   #raga-table tr.main-row { height: auto; }
 
-  /* Search bar: prevent filter button overflow */
+  /* Search bar: keep filter button off the right edge */
   .controls {
     flex-wrap: wrap;
     gap: 8px;
+    padding-right: 16px;
   }
   .search-wrap { flex: 1; min-width: 0; }
 
