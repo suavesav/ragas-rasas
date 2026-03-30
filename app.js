@@ -10,8 +10,12 @@ function renderRows(data) {
     tr.classList.add('main-row');
     tr.innerHTML = `
       <td>
-        <div class="raga-name">${r.name}<span class="expand-icon">▶</span></div>
+        <div class="raga-line1">
+          <div class="raga-name">${r.name}<span class="expand-icon">▶</span></div>
+          <div class="mobile-meta-tags">${rasaTags}</div>
+        </div>
         ${r.alt ? `<div class="raga-alt">${r.alt}</div>` : ''}
+        <div class="row-mobile-meta">${[r.alt && r.alt !== r.thaat ? r.alt : null, r.thaat, r.time, r.season].filter(Boolean).join(' · ')}</div>
       </td>
       <td class="thaat-cell">${r.thaat}</td>
       <td><span class="time-badge">${r.time}</span></td>
