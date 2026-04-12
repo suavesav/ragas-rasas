@@ -3,24 +3,24 @@ function renderRows(data) {
   tbody.innerHTML = '';
   data.forEach(r => {
     const tr = document.createElement('tr');
-    const rasaTags = r.rasas.map(rasa =>
-      `<span class="rasa-tag ${rasaClass[rasa] || ''}">${rasa}</span>`
+    const rasTags = r.ras.map(ras =>
+      `<span class="ras-tag ${rasClass[ras] || ''}">${ras}</span>`
     ).join('');
     const sClass = seasonClass[r.season] || 's-any';
     tr.classList.add('main-row');
     tr.innerHTML = `
       <td>
-        <div class="raga-line1">
-          <div class="raga-name">${r.name}<span class="expand-icon">▶</span></div>
-          <div class="mobile-meta-tags">${rasaTags}</div>
+        <div class="raag-line1">
+          <div class="raag-name">${r.name}<span class="expand-icon">▶</span></div>
+          <div class="mobile-meta-tags">${rasTags}</div>
         </div>
-        ${r.alt ? `<div class="raga-alt">${r.alt}</div>` : ''}
+        ${r.alt ? `<div class="raag-alt">${r.alt}</div>` : ''}
         <div class="row-mobile-meta">${[r.alt && r.alt !== r.thaat ? r.alt : null, r.thaat, r.time, r.season].filter(Boolean).join(' · ')}</div>
       </td>
       <td class="thaat-cell">${r.thaat}</td>
       <td><span class="time-badge">${r.time}</span></td>
       <td><span class="season-badge ${sClass}">${r.season}</span></td>
-      <td>${rasaTags}</td>
+      <td>${rasTags}</td>
       <td class="char-cell">${r.char}</td>
     `;
 
@@ -47,8 +47,8 @@ function renderRows(data) {
         }
       }
     });
-    tr.dataset.search = [r.name, r.alt, r.thaat, r.time, r.season, r.rasas.join(' '), r.char].join(' ').toLowerCase();
-    tr.dataset.rasas = r.rasas.join(',');
+    tr.dataset.search = [r.name, r.alt, r.thaat, r.time, r.season, r.ras.join(' '), r.char].join(' ').toLowerCase();
+    tr.dataset.ras = r.ras.join(',');
     tr.dataset.season = r.season;
     tr.dataset.time = r.time;
     tr.dataset.thaat = r.thaat;
@@ -62,28 +62,28 @@ function updateStats() {
   const visible = document.querySelectorAll('#tbody tr.main-row:not(.hidden)').length;
   const total = document.querySelectorAll('#tbody tr.main-row').length;
   document.getElementById('stats').textContent =
-    visible === total ? `Showing all ${total} ragas` : `Showing ${visible} of ${total} ragas`;
+    visible === total ? `Showing all ${total} raags` : `Showing ${visible} of ${total} raags`;
 }
 
 // Filter state — each group holds a Set of selected values
 const activeFilters = {
-  rasa:   new Set(),
+  ras:   new Set(),
   time:   new Set(),
   season: new Set(),
   thaat:  new Set(),
 };
 let searchTerm = '';
 
-const groupLabels = { rasa: 'Rasa', time: 'Time', season: 'Season', thaat: 'Thaat' };
+const groupLabels = { ras: 'Ras', time: 'Time', season: 'Season', thaat: 'Thaat' };
 
 function applyFilters() {
   document.querySelectorAll('#tbody tr.main-row').forEach(tr => {
     const matchSearch = !searchTerm || tr.dataset.search.includes(searchTerm);
-    const matchRasa   = activeFilters.rasa.size === 0   || [...activeFilters.rasa].every(v => tr.dataset.rasas.includes(v));
+    const matchRas   = activeFilters.ras.size === 0   || [...activeFilters.ras].every(v => tr.dataset.ras.includes(v));
     const matchTime   = activeFilters.time.size === 0   || activeFilters.time.has(tr.dataset.time);
     const matchSeason = activeFilters.season.size === 0 || activeFilters.season.has(tr.dataset.season);
     const matchThaat  = activeFilters.thaat.size === 0  || activeFilters.thaat.has(tr.dataset.thaat);
-    const hide = !(matchSearch && matchRasa && matchTime && matchSeason && matchThaat);
+    const hide = !(matchSearch && matchRas && matchTime && matchSeason && matchThaat);
     tr.classList.toggle('hidden', hide);
     const detail = tr.nextElementSibling;
     if (detail?.classList.contains('detail-row')) detail.classList.toggle('hidden', hide);
@@ -193,10 +193,10 @@ document.querySelectorAll('th[data-col]').forEach(th => {
   });
 });
 
-function renderDetail(raga, panel) {
-  const d = ragaDetails[raga.name];
+function renderDetail(raag, panel) {
+  const d = raagDetails[raag.name];
   if (!d) {
-    panel.innerHTML = `<div style="font-family:'Inconsolata',monospace;font-size:0.8rem;color:var(--muted);padding:12px 0">Detailed information for this raga is not yet available.</div>`;
+    panel.innerHTML = `<div style="font-family:'Inconsolata',monospace;font-size:0.8rem;color:var(--muted);padding:12px 0">Detailed information for this raag is not yet available.</div>`;
     return;
   }
   panel.innerHTML = `
@@ -230,4 +230,4 @@ function renderDetail(raga, panel) {
   `;
 }
 
-renderRows(ragas);
+renderRows(raags);
