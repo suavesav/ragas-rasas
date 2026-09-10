@@ -306,7 +306,7 @@ Round 1 stripped Summer, Autumn and Winter from the app on the grounds that no s
 
 **The six ritu.** Vasant (spring), Grishma (summer), Varsha (monsoon), Sharad (autumn), Hemant (early winter), Shishir (deep winter).
 
-**The treatise scheme.** The raga-ragini systems were built on six patriarchal raags — the Raga Guide reproduces Damodara's (c.1625) version of the Hanuman scheme: Bhairav, Kaushik (Malkauns), Hindol, Dipak, Shri, Megh — and those six were mapped to the six seasons. The Archives and Research Centre for Ethnomusicology gives the most widely followed mapping, from the *Sangita Ratnakara* (13th c.) and *Sangita Darpana* (c.1625):
+**The treatise scheme.** The raga-ragini systems were built on six patriarchal raags: the Raga Guide reproduces Damodara's (c.1625) version of the Hanuman scheme: Bhairav, Kaushik (Malkauns), Hindol, Dipak, Shri, Megh; and those six were mapped to the six seasons. The Archives and Research Centre for Ethnomusicology gives the most widely followed mapping, from the *Sangita Ratnakara* (13th c.) and *Sangita Darpana* (c.1625):
 
 | Ritu | Raag | Status here |
 |---|---|---|
@@ -317,7 +317,7 @@ Round 1 stripped Summer, Autumn and Winter from the app on the grounds that no s
 | Hemant | Shree | season Winter (rule) |
 | Shishir | Malkauns | season Any; winter as association |
 
-A competing scheme in the *Manasollasa* (Someshwara, 1131), reported by Deepak Raja, gives spring to Vasanta, summer to Bhairava, monsoon to Megh, autumn to Panchama, early winter to Natanarayana, deep winter to Shree. The two schemes agree only on Megh's monsoon and Shree's winter — which is why those two are treated as rules and the rest as history.
+A competing scheme in the *Manasollasa* (Someshwara, 1131), reported by Deepak Raja, gives spring to Vasanta, summer to Bhairava, monsoon to Megh, autumn to Panchama, early winter to Natanarayana, deep winter to Shree. The two schemes agree only on Megh's monsoon and Shree's winter, which is why those two are treated as rules and the rest as history.
 
 **What survives in practice.** Deepak Raja: "the enthusiasm of the performing tradition has been limited largely to Vasanta (spring) and Varsha (rainy season)", because both seasons signify nature renewing itself. Shailaja Khanna in *The Tribune* reports the autumn, pre-winter and summer traditions as having "passed into oblivion". The Raga Guide is consistent with both: of 74 raags it names a season in the time field for only Bahar and Basant (spring), Gaud Malhar, Megh, Miyan ki Malhar and Sur Malhar (rains), plus Shree (winter) and a note that Kafi's hori belongs to Holi.
 
