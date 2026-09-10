@@ -25,25 +25,55 @@ function normalizeTime(t) {
   return t.split(' / ')[0].trim();
 }
 
-function seasonFromMonth(monthIndex, lat) {
-  let m = monthIndex;
-  if (lat < 0) m = (m + 6) % 12;
-  if (m === 1 || m === 2) return 'Spring';
-  if (m === 3 || m === 4 || m === 5) return 'Summer';
-  if (m === 6 || m === 7 || m === 8) return 'Monsoon';
-  if (m === 9 || m === 10) return 'Autumn';
-  return 'Winter'; // 11 (Dec), 0 (Jan)
+// Time zones whose calendar has a monsoon season (South Asia). Elsewhere the temperate four apply.
+const MONSOON_ZONES = /^Asia\/(Kolkata|Calcutta|Colombo|Dhaka|Kathmandu|Karachi|Thimphu|Yangon|Rangoon)$/;
+// Time zones in the southern hemisphere, used when there is no latitude.
+const SOUTHERN_ZONES = /^(Australia\/|Pacific\/(Auckland|Chatham|Fiji|Tongatapu|Apia)|Antarctica\/|Africa\/(Johannesburg|Maputo|Harare|Lusaka|Windhoek|Gaborone|Maseru|Mbabane|Blantyre|Lubumbashi|Nairobi|Dar_es_Salaam|Kigali|Bujumbura|Luanda|Kinshasa|Brazzaville)|America\/(Sao_Paulo|Buenos_Aires|Argentina\/|Santiago|Montevideo|Asuncion|La_Paz|Lima|Bogota|Punta_Arenas|Recife|Fortaleza|Bahia|Belem|Cuiaba|Campo_Grande|Manaus|Porto_Velho|Rio_Branco|Maceio|Araguaina)|Indian\/(Mauritius|Reunion|Antananarivo|Mahe)|Atlantic\/(Stanley|South_Georgia))/;
+
+function isSouthern(lat, tz) {
+  if (typeof lat === 'number') return lat < 0;
+  return !!(tz && SOUTHERN_ZONES.test(tz));
 }
 
-function seasonFromWeather(weather, monthIndex, lat) {
-  const { temperature, precipitation, weatherCode } = weather;
-  // The "rain rule": precipitation present, or a weather code for rain/showers/thunderstorm.
+// Rough guess with no weather at all: the month, the hemisphere, and whether the
+// local calendar has a monsoon. tz is an IANA zone name; lat overrides it for hemisphere.
+function seasonFromMonth(monthIndex, lat, tz) {
+  let m = monthIndex;
+  if (isSouthern(lat, tz)) m = (m + 6) % 12;
+  if (tz && MONSOON_ZONES.test(tz)) {
+    if (m === 1 || m === 2) return 'Spring';
+    if (m >= 3 && m <= 5) return 'Summer';
+    if (m >= 6 && m <= 8) return 'Monsoon';
+    if (m === 9 || m === 10) return 'Autumn';
+    return 'Winter';
+  }
+  if (m >= 2 && m <= 4) return 'Spring';
+  if (m >= 5 && m <= 7) return 'Summer';
+  if (m >= 8 && m <= 10) return 'Autumn';
+  return 'Winter';
+}
+
+const RAIN_CODES = c => (c >= 51 && c <= 67) || (c >= 80 && c <= 82) || (c >= 95 && c <= 99);
+const SNOW_CODES = c => (c >= 71 && c <= 77) || c === 85 || c === 86;
+
+// Weather decides; the month only breaks the mild-weather tie between spring and autumn.
+// weather: { high: today's max °C, precipitation: today's mm, weatherCode: WMO code }
+function seasonFromWeather(weather, monthIndex, lat, tz) {
+  const { high, precipitation, weatherCode } = weather;
+  if (precipitation >= 0.5 || RAIN_CODES(weatherCode)) return 'Monsoon';
+  if (SNOW_CODES(weatherCode) || high <= 12) return 'Winter';
+  if (high >= 28) return 'Summer';
+  const m = isSouthern(lat, tz) ? (monthIndex + 6) % 12 : monthIndex;
+  return m <= 5 ? 'Spring' : 'Autumn';
+}
+
+function weatherWord(weatherCode) {
   const c = weatherCode;
-  const raining = precipitation > 0 || (c >= 51 && c <= 67) || (c >= 80 && c <= 82) || (c >= 95 && c <= 99);
-  if (raining) return 'Monsoon';
-  if (temperature >= 30) return 'Summer';
-  if (temperature <= 12) return 'Winter';
-  return seasonFromMonth(monthIndex, lat);
+  if (RAIN_CODES(c)) return c >= 95 ? 'storm' : 'rain';
+  if (SNOW_CODES(c)) return 'snow';
+  if (c === 45 || c === 48) return 'fog';
+  if (c >= 1 && c <= 3) return 'cloudy';
+  return 'clear';
 }
 
 const FEELINGS = [
@@ -206,12 +236,6 @@ if (typeof document !== 'undefined') {
       };
     }
 
-    // Mirrors the rain rule inside seasonFromWeather, to derive the readout's "rain"/"clear" word.
-    function isRaining(precipitation, weatherCode) {
-      const c = weatherCode;
-      return precipitation > 0 || (c >= 51 && c <= 67) || (c >= 80 && c <= 82) || (c >= 95 && c <= 99);
-    }
-
     function formatTime(d) {
       let h = d.getHours();
       const m = d.getMinutes();
@@ -228,13 +252,18 @@ if (typeof document !== 'undefined') {
     // ---------- state ----------
 
     const now = new Date();
+    let timeZone;
+    try { timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) { timeZone = undefined; }
     const state = {
       bucket: bucketForHour(now.getHours()),
-      season: seasonFromMonth(now.getMonth()),
+      season: seasonFromMonth(now.getMonth(), undefined, timeZone),
       monthIndex: now.getMonth(),
+      monthName: now.toLocaleString('en', { month: 'long' }).toLowerCase(),
+      timeZone,
       timeStr: formatTime(now),
-      weatherWord: null, // 'rain' | 'clear' | null (month fallback)
+      weatherWord: null, // condition word from the weather code, or null when only the month is known
       tempC: null,
+      highC: null,
       seasonLocked: false, // true once the season sheet has been opened
       chosen: new Set(),
       ranked: [],
@@ -321,7 +350,7 @@ if (typeof document !== 'undefined') {
       if (state.weatherWord) {
         parts.push(state.weatherWord, `${state.tempC}°C`);
       } else {
-        parts.push('month');
+        parts.push(state.monthName);
       }
       basedOnEl.textContent = parts.join(' · ');
     }
@@ -332,9 +361,9 @@ if (typeof document !== 'undefined') {
         const color = isCurrent ? SEASON_COLORS[s] : '#8a7a60';
         let reason = SEASON_MONTHS[s];
         if (isCurrent) {
-          if (state.weatherWord === 'rain') reason = 'raining near you';
-          else if (state.weatherWord === 'clear') reason = `${state.tempC}°C near you`;
-          else reason = 'by month';
+          if (state.weatherWord === 'rain' || state.weatherWord === 'storm') reason = 'raining near you';
+          else if (state.weatherWord) reason = `up to ${state.highC}°C today`;
+          else reason = `it's ${state.monthName}`;
         }
         return `<button type="button" class="sheet-row" data-season="${esc(s)}" style="color:${color}">
           <span class="sheet-row-name">${esc(s.toLowerCase())}</span>
@@ -611,34 +640,59 @@ if (typeof document !== 'undefined') {
 
     // ---------- weather / geolocation ----------
 
+    let weatherRequested = false;
+
+    function fetchWeather(latitude, longitude) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 8000);
+      const url = 'https://api.open-meteo.com/v1/forecast'
+        + `?latitude=${latitude}&longitude=${longitude}`
+        + '&current=temperature_2m,precipitation,weather_code'
+        + '&daily=temperature_2m_max,precipitation_sum&forecast_days=1&timezone=auto';
+      fetch(url, { signal: controller.signal })
+        .then(r => (r.ok ? r.json() : Promise.reject(new Error('bad response'))))
+        .then(data => {
+          const cur = data && data.current;
+          const day = data && data.daily;
+          if (!cur || typeof cur.temperature_2m !== 'number') return;
+          const high = Math.max(cur.temperature_2m, (day && day.temperature_2m_max && day.temperature_2m_max[0]) || -Infinity);
+          const precipitation = Math.max(cur.precipitation || 0, (day && day.precipitation_sum && day.precipitation_sum[0]) || 0);
+          const weather = { high, precipitation, weatherCode: cur.weather_code };
+          if (state.seasonLocked) return;
+          state.season = seasonFromWeather(weather, state.monthIndex, latitude, state.timeZone);
+          state.weatherWord = weatherWord(cur.weather_code);
+          state.tempC = Math.round(cur.temperature_2m);
+          state.highC = Math.round(high);
+          renderGuess();
+        })
+        .catch(() => {})
+        .finally(() => clearTimeout(timer));
+    }
+
+    // The timeout must outlast the permission prompt, which counts against it in most browsers.
+    function requestPosition() {
+      if (weatherRequested) return;
+      weatherRequested = true;
+      navigator.geolocation.getCurrentPosition(
+        (pos) => fetchWeather(pos.coords.latitude, pos.coords.longitude),
+        () => { weatherRequested = false; },
+        { timeout: 30000, maximumAge: 10 * 60 * 1000 }
+      );
+    }
+
     function tryWeather() {
       if (!('geolocation' in navigator)) return;
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          const { latitude, longitude } = pos.coords;
-          const controller = new AbortController();
-          const timer = setTimeout(() => controller.abort(), 5000);
-          const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,precipitation,weather_code`;
-          fetch(url, { signal: controller.signal })
-            .then(r => (r.ok ? r.json() : Promise.reject(new Error('bad response'))))
-            .then(data => {
-              const cur = data && data.current;
-              if (!cur || typeof cur.temperature_2m !== 'number') return;
-              const weather = { temperature: cur.temperature_2m, precipitation: cur.precipitation, weatherCode: cur.weather_code };
-              const newSeason = seasonFromWeather(weather, state.monthIndex, latitude);
-              if (!state.seasonLocked) {
-                state.season = newSeason;
-                state.weatherWord = isRaining(weather.precipitation, weather.weatherCode) ? 'rain' : 'clear';
-                state.tempC = Math.round(weather.temperature);
-                renderGuess();
-              }
-            })
-            .catch(() => {})
-            .finally(() => clearTimeout(timer));
-        },
-        () => {},
-        { timeout: 5000 }
-      );
+      requestPosition();
+      // If permission is granted later (site settings, or a slow prompt), fetch then.
+      if (navigator.permissions && navigator.permissions.query) {
+        navigator.permissions.query({ name: 'geolocation' })
+          .then(status => {
+            status.addEventListener('change', () => {
+              if (status.state === 'granted' && !state.weatherWord) requestPosition();
+            });
+          })
+          .catch(() => {});
+      }
     }
 
     // ---------- init ----------
@@ -649,4 +703,4 @@ if (typeof document !== 'undefined') {
   }());
 }
 
-if (typeof module !== 'undefined') module.exports = { BUCKETS, bucketForHour, adjacentBuckets, normalizeTime, seasonFromMonth, seasonFromWeather, FEELINGS, buildPool, feelingsFor, rank };
+if (typeof module !== 'undefined') module.exports = { BUCKETS, bucketForHour, adjacentBuckets, normalizeTime, seasonFromMonth, seasonFromWeather, weatherWord, FEELINGS, buildPool, feelingsFor, rank };
