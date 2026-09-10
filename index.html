@@ -24,7 +24,7 @@
   <div class="controls">
     <div class="search-wrap">
       <span class="search-icon">⌕</span>
-      <input type="text" id="search" placeholder="Search raag, thaat, ras, season..." />
+      <input type="text" id="search" placeholder="Search raag, thaat, family, ras, season..." />
     </div>
     <button class="filter-toggle-btn" id="filter-toggle">◈ Filters</button>
   </div>
@@ -59,6 +59,7 @@
       <button class="fchip r-shringar" data-group="ras" data-value="Shringar">Shringar</button>
       <button class="fchip r-karuna" data-group="ras" data-value="Karuna">Karuna</button>
       <button class="fchip r-shanta" data-group="ras" data-value="Shanta">Shanta</button>
+      <button class="fchip r-bhakti" data-group="ras" data-value="Bhakti">Bhakti</button>
       <button class="fchip r-raudra" data-group="ras" data-value="Raudra">Raudra</button>
       <button class="fchip r-veer" data-group="ras" data-value="Veer">Veer</button>
       <button class="fchip r-adbhuta" data-group="ras" data-value="Adbhuta">Adbhuta</button>
@@ -85,7 +86,9 @@
     <div class="filter-section-label">Season</div>
     <div class="filter-chips" id="chips-season">
       <button class="fchip s-spring"  data-group="season" data-value="Spring">Spring</button>
+      <button class="fchip s-summer"  data-group="season" data-value="Summer">Summer</button>
       <button class="fchip s-monsoon" data-group="season" data-value="Monsoon">Monsoon</button>
+      <button class="fchip s-winter"  data-group="season" data-value="Winter">Winter</button>
       <button class="fchip s-any"     data-group="season" data-value="Any">Any season</button>
     </div>
   </div>
@@ -102,8 +105,12 @@
       <button class="fchip" data-group="thaat" data-value="Todi">Todi</button>
       <button class="fchip" data-group="thaat" data-value="Purvi">Purvi</button>
       <button class="fchip" data-group="thaat" data-value="Marwa">Marwa</button>
-      <button class="fchip" data-group="thaat" data-value="Carnatic">Carnatic (no thaat)</button>
+      <button class="fchip" data-group="thaat" data-value="Other">Other (no thaat)</button>
     </div>
+  </div>
+  <div class="filter-section">
+    <div class="filter-section-label">Family</div>
+    <div class="filter-chips" id="chips-family"></div>
   </div>
   <div class="filter-panel-footer">
     <button class="filter-reset-btn" id="reset-btn">✕ Clear all filters</button>
@@ -114,11 +121,12 @@
 </div><!-- /.layout -->
 
 <div class="legend">
-  <h3>Navaras — The Nine Emotional Essences</h3>
+  <h3>Ras — The Nine Emotional Essences, plus Bhakti</h3>
   <div class="legend-grid">
     <div class="legend-item"><div class="legend-dot" style="background:#e080b0"></div> Shringar — Love &amp; Beauty</div>
     <div class="legend-item"><div class="legend-dot" style="background:#8898e0"></div> Karuna — Compassion &amp; Pathos</div>
     <div class="legend-item"><div class="legend-dot" style="background:#80c080"></div> Shanta — Peace &amp; Serenity</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#90b8e0"></div> Bhakti — Devotion</div>
     <div class="legend-item"><div class="legend-dot" style="background:#e07060"></div> Raudra — Fury &amp; Ferocity</div>
     <div class="legend-item"><div class="legend-dot" style="background:#e09840"></div> Veer — Heroism &amp; Courage</div>
     <div class="legend-item"><div class="legend-dot" style="background:#b080e0"></div> Adbhuta — Wonder &amp; Mystery</div>
@@ -130,6 +138,7 @@
 
 <footer>
   Hindustani Classical Music — Raag Compendium &nbsp;·&nbsp; Ras per Bharata Muni's Natyashastra
+  <div class="footer-links"><a href="sources.html">Sources</a> · <a href="research.html">Research notes</a> · <a href="research-evidence.html">Evidence file</a></div>
 </footer>
 
 <div id="overlay"></div>

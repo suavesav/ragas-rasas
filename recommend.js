@@ -99,6 +99,9 @@ const FEELINGS = [
   { word: 'proud', ras: 'Veer' },
   { word: 'curious', ras: 'Adbhuta' },
   { word: 'stormy', ras: 'Raudra' },
+  { word: 'devotional', ras: 'Bhakti' },
+  { word: 'reverent', ras: 'Bhakti' },
+  { word: 'soulful', ras: 'Bhakti' },
   { word: 'uneasy', ras: 'Bhayanaka' },
   { word: 'haunted', ras: 'Bhayanaka' },
   { word: 'brooding', ras: 'Bhayanaka' },
@@ -181,6 +184,7 @@ if (typeof document !== 'undefined') {
       Veer: { bg: '#7c4a14', text: '#ffdcb0' },
       Adbhuta: { bg: '#4e2c7a', text: '#e9d8ff' },
       Raudra: { bg: '#7a2a1c', text: '#ffd2c8' },
+      Bhakti: { bg: '#2c4a6e', text: '#d6e8ff' },
       Bhayanaka: { bg: '#185048', text: '#c8f0e8' },
     };
 
@@ -192,6 +196,7 @@ if (typeof document !== 'undefined') {
       Veer: { a: '#b06a1a', b: '#5a3410' },
       Adbhuta: { a: '#7040b0', b: '#3a2060' },
       Raudra: { a: '#b04030', b: '#5a2018' },
+      Bhakti: { a: '#4a7ab0', b: '#24405e' },
       Bhayanaka: { a: '#2a8a7a', b: '#164a40' },
     };
 
@@ -527,9 +532,9 @@ if (typeof document !== 'undefined') {
 
       const timeLabel = normalizeTime(raag.time).toLowerCase();
       const borderCol = hexToRgba(rasColors.text, 0.4);
-      // Raags borrowed from the Carnatic system have no thaat, so no popover.
-      const thaatPill = raag.thaat === 'Carnatic'
-        ? `<span class="pill pill-time">carnatic · no thaat</span>`
+      // Raags outside the ten thaats (Carnatic imports and the like) get a plain pill, no popover.
+      const thaatPill = raag.thaat === 'Other'
+        ? `<span class="pill pill-time">no thaat</span>`
         : `<button type="button" class="pill pill-thaat" data-popover="thaat" data-name="${esc(raag.thaat)}" style="border-color:${borderCol}">${esc(raag.thaat)} thaat ${ICON_INFO}</button>`;
       revealPillsEl.innerHTML = `
         ${thaatPill}
@@ -569,8 +574,11 @@ if (typeof document !== 'undefined') {
           ['Swaras', details.swaras],
           ['Vadi', details.vadi],
           ['Samvadi', details.samvadi],
+          ['Jati', details.jati],
+          ['Family', details.family],
           ['Arohana', details.arohana],
           ['Avarohana', details.avarohana],
+          ['Pakad', details.pakad],
           ['Aalap', details.aalap],
         ];
         html += `<div class="detail-grid">${fields.map(([label, val]) => val ? `

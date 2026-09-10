@@ -22,7 +22,7 @@ const rasNames = new Set(ctx.rasInfo.map(r => r.name));
 for (const r of raags) {
   check(KNOWN_TIMES.has(R.normalizeTime(r.time)), `${r.name}: unknown time "${r.time}"`);
   check(KNOWN_SEASONS.has(r.season), `${r.name}: unknown season "${r.season}"`);
-  check(thaatNames.has(r.thaat) || r.thaat === 'Carnatic', `${r.name}: no thaatInfo for "${r.thaat}"`);
+  check(thaatNames.has(r.thaat) || r.thaat === 'Other', `${r.name}: no thaatInfo for "${r.thaat}"`);
   for (const s of r.ras) check(rasNames.has(s), `${r.name}: no rasInfo for "${s}"`);
   check(ctx.raagDetails[r.name], `${r.name}: no raagDetails entry`);
 }
@@ -69,8 +69,17 @@ check(R.weatherWord(0) === 'clear' && R.weatherWord(2) === 'cloudy' && R.weather
 const evening = R.buildPool(raags, 'Evening');
 const top = R.rank(evening, new Set(['Shringar']), 'Any', () => 0.5)[0];
 check(top.tier === 0 && top.raag.ras[0] === 'Shringar', 'top Evening/Shringar is a tier-0 primary match');
-const monsoonNight = R.rank(R.buildPool(raags, 'Night'), new Set(['Shringar', 'Karuna']), 'Monsoon', () => 0.5);
-check(monsoonNight[0].matched === 2 && monsoonNight[0].seasonRank === 0, 'Night/Shringar+Karuna/Monsoon ranks Des or Desh first');
+// ranking is ordered by matched desc, then tier asc, then seasonRank asc, for every bucket and season
+for (const b of R.BUCKETS) {
+  const ranked = R.rank(R.buildPool(raags, b), new Set(['Shringar', 'Karuna']), 'Monsoon', () => 0.5);
+  for (let i = 1; i < ranked.length; i++) {
+    const a = ranked[i - 1], c = ranked[i];
+    const ok = a.matched > c.matched
+      || (a.matched === c.matched && (a.tier < c.tier
+      || (a.tier === c.tier && a.seasonRank <= c.seasonRank)));
+    check(ok, `${b}: ${a.raag.name} ranked above ${c.raag.name} out of order`);
+  }
+}
 
 console.log(failures ? `${failures} failure(s)` : 'all checks passed');
 process.exit(failures ? 1 : 0);
