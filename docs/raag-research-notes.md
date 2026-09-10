@@ -1,0 +1,205 @@
+# Raag research notes (round 2 evidence file)
+
+Raw extracts per source, kept as the audit trail for docs/raag-research-round2.md. Tags: T tanarang, W Wikipedia, RG Raga Guide, P Parrikar, RJ ragajunglism, M15 Mathur 2015, B99 Balkwill 1999.
+
+# Research notes (T=tanarang, W=Wikipedia, RG=Raga Guide, P=Parrikar, RJ=ragajunglism, M15=Mathur 2015, B99=Balkwill 1999)
+## Batch 1 (Kalyan/Bilawal)
+- Yaman T: Kalyan; Ga/Ni; 6-9pm; pakad ,N R G / M D P N D P M R G R. no mood word.
+- Kedar T: Kalyan; Ma/Sa; 6-9pm; aroh S M P D N S'; avroh S' N D P M P D P m m R S; "thermal energy, raagini of Deepak"; komal Ni occasionally in descent. W: Ma/Sa; similar Hameer, Gaud Sarang, Kamod, Chhayanat; cites RG.
+- Hameer T: Kalyan; Dha/Ga; 9-12pm; aroh S G m D N D S'; avroh S' N D P M P D P G m P G m R S; "Veer rasa, dynamic"; uttarang. W: same vadi; cites RG; similar Kamod Kedar Gaud Sarang Chhayanat.
+- Kamod T: Kalyan; Pa/Re; 6-9pm (app Night); aroh S R P, G m R S, m R P, D N S'; avroh S' N D P, M P D P, G m P, G m R S; related Malhar/Hameer/Kalyan/Kedar/Chhayanut.
+- Nand T: Kalyan; Sa/Pa; 9-12pm; shadhav-sampurna vakra; Re varjya aroh; "soothing, Karun ras"; similar Bihag Gaud Sarang Hameer Kamod; alt Anandi/Anandi Kalyan/Nand Kalyan.
+- Shuddha Kalyan T: Kalyan; Ga/Dha (app Ga/Ni); 6-9pm; aroh S R G P D S'; avroh S' N D P M G R S; alt Bhoop-Kalyan.
+- Bhoopali T: Kalyan; Ga/Dha; 6-9pm; "tranquil soft; Shringar ras"; W: Ga/Dha; "Shanti rasa, Bhakti"; cites Danielou, Menon, Yagnik.
+- Deshkar T: BILAWAL thaat (app Kalyan); Dha/Ga; 6-9am; uttarang; similar Bhoopali. -> fix thaat.
+- Hindol T: Kalyan; Dha/Ga; TIME 12-3am (app Morning); "difficult, not much in vogue". W: Dha/Ga; 12-3am; season spring; "swing".
+- Alhaiya Bilawal T: Bilawal; Dha/Ga; 6-9am; shadhav-sampurna; both Ni; "pleasing serene".
+- Bihag T: KALYAN (modern, was Bilawal); Ga/Ni; 9-12pm; Re Dha varjya aroh; "full of Shringar ras". W: Bilawal; Ga/Ni; 9-12; similar Maru Bihag, Bihagara; cites RG.
+- Hansdhwani T: Bilawal; Sa/Pa (app Ga/Ni); 9-12pm; Carnatic origin; related Shankara.
+- Durga T: Bilawal; Ma/Sa; 9-12pm; "soothing, neither deep nor playful"; Carnatic origin. W: Ma/Sa; "sringara rasa"; cites RG, Yagnik.
+- Shankara T: Bilawal; Ga/Ni; 9-12pm; "Veer rasa, surge of life force". W: Ga/Ni; uttarang; similar Hansadhwani.
+- Devgiri Bilawal T: Bilawal; Sa/Pa (app Dha/Ga); 6-9am; both Ni; Ma varjya aroh; related Shuddha Kalyan, Yamani Bilawal.
+- Gaud Sarang T: Kalyan; Ga/Dha; 12-3pm; "Shringar"; related Kedar Bihag Hameer.
+- Shuddha Sarang T: Kalyan; Re/Pa; TIME 9am-12 (app Afternoon); both Ma; related Shyam Kalyan.
+- Gaud Malhar T: Bilawal; Ma/Sa; 9-12pm or rainy season; "vipralambh shringar"; also called Gaud.
+- Mand T: Bilawal; Sa/Pa; 9-12pm (app Any); all shuddha; light/bhajan/ghazal; Rajasthani.
+- Empirical: B99 (performer-chosen): Bhupali+Khamaj=Hasya(joy); Jogiya,Bhairavi,Bhupal Todi=Karuna; Hindol,Adana,Sohini=Raudra; Yaman Kalyan,Yaman,Bilaskhani=Shanta. M15 (122 Indian listeners): Hansadhwani,Tilak Kamod,Desh,Rageshree,Jog,Yaman = calm(alaap)/happy(gat); Malkauns=sad/longing; Marwa,Basant Mukhari,Lalit,Miyan ki Todi=sad/tensed; Shree=sad/longing.
+## Batch 2 (Khamaj/Bhairav/Purvi/Marwa) — tanarang
+- Khamaj: Khamaj; Ga/Ni; 9-12pm; aroh S G m P D N S'; "light, enthralling, not sedate; separation and union; thumri; virah".
+- Des: Khamaj; Re/Pa; 9-12pm; "very sweet; S-P and S-m bhava".
+- Tilak Kamod: Khamaj; Sa/Pa (W says Re/Pa) CONFLICT; 9-12pm; Ga,Dha varjya aroh; komal Ni rare; "Shringar, Karun or Bhakti alike; sung in rainy season".
+- Jhinjhoti: Khamaj; Ga/Ni; 9-12pm; Ni varjya aroh; "light, playful, instrumental"; nearest Khambavati.
+- Rageshree: Khamaj; Ga/Ni; 9-12pm; audhav-shadhav (no Re,Pa in aroh; no Pa in avroh); variant Pancham-Rageshree.
+- Tilang: Khamaj; Ga/Ni; 9-12pm; both Ni; "very sweet"; ~Carnatic Hamsashree.
+- Jog: T says KAFI thaat; Ma/Sa; 9-12pm; both Ga; "melodious, straightforward, meend pradhan". (PR set Khamaj -> check W)
+- Gorakh Kalyan: Khamaj; Ma/Sa; 9-12pm; aroh S R m D S'; "very sweet, pleasant, enchanting"; related Narayani, Bageshree.
+- Pilu: Kafi; Ga/Ni; 12-3pm (app Any); both Ga,Dha,Ni; "light; thumri, bhajan; devotion and piety".
+- Bhairav: Bhairav; Dha/Re; 6-9am; "king of morning raags; rich, ocean-like".
+- Ahir Bhairav: Bhairav; Ma/Sa; 6-9am; "Bhairav poorvang + Kafi uttarang; Bhakti ras".
+- Nat Bhairav: Bhairav; Ma/Sa (app Pa/Sa); 6-9am; only Dha komal; "heavy, uttarang; popularised by Ravi Shankar; relatively new".
+- Ramkali: Bhairav; Pa/Sa; 6-9am; both Ma, both Ni; less andolan than Bhairav.
+- Vibhas: Bhairav; Dha/Re; 6-9am; S r G P d; "heavy, Bhakti"; derived from Deshkar.
+- Jogiya: Bhairav; Ma/Sa (app Re/Pa); 6-9am / brahma muhurta; Ga varjya, Ni only in avroh; "devotion and detachment; heavy; thumri/bhajan".
+- Bairagi: Bhairav; Ma/Sa (app Sa/Pa); 6-9am; S r m P n; "melodious, devotional; introduced by Ravi Shankar".
+- Gauri (Bhairav ang): Bhairav; Re/Pa; 3-6pm; "compassion, piety, viraha shringar".
+- Lalit: Poorvi; shuddha Ma/Sa; 3-6am; "Bhakti and Karuna".
+- Bhatiyar: Marwa; shuddha Ma/Sa; 3-6am; "anxiety laden; glimpses of Mand".
+- Puriya: Marwa; Ga/Ni; 9-12pm (app Sunset); "sobering, piety; king of night raags".
+- Marwa: Marwa; Re/Dha; 3-6pm; "detachment/renunciation; melodious".
+- Sohani: Marwa; Dha/Ga; 3-6am; "tranquil moist night before dawn".
+- Shree: Poorvi; Re/Pa; 3-6pm; "deeply devotional, anxiety laden; Purush raag; meend pradhan".
+- Poorvi: Poorvi; Ga/Ni; 3-6pm; both Ma; "heavy, Karun ras; sandhi prakash".
+- Puriya Dhanashree: Poorvi; Pa/Sa (W Pa/Re) CONFLICT; 3-6pm; "compassion, emotional".
+- Basant: Poorvi; Sa'/Pa; 9-12pm or spring; "Shringar and Virah; heavy; meend"; related Shree.
+## Batch 3 (Bhairavi/Kafi/Asavari/Todi/Carnatic) — tanarang (+W where noted)
+- Bhairavi: Bhairavi; Ma/Sa; 6-9am or sarvakalik; "queen of melodies; love and piety; sobering"; all 12 notes in practice.
+- Malkauns: Bhairavi; Ma/Sa; 12-3am; "severely tranquil; strong public appeal".
+- Bhupal Todi: Bhairavi; Dha/Ga; 6-9am; S r g P d; "spiritual purity, devotional".
+- Bilaskhani Todi: Bhairavi; Dha/Ga; 9am-12; Ma,Ni varjya aroh; Pa varjya avroh; "deep, soothing; difficult".
+- Komal Rishabh Asawari: Bhairavi; Dha/Re (app Dha/Ga); 9am-12; "very sweet; deep soothing; meend pradhan".
+- Kafi: Kafi; Pa/Sa (app Ga/Ni); 9-12pm; "Bhairavi of night; both shringars; thumri, hori".
+- Bageshree: Kafi; Ma/Sa; 9-12pm (app Late night); Pa varjya aroh; "virah and karuna shringar".
+- Bheempalasi: Kafi; Ma/Sa; 12-3pm; "sweet, hauntingly pleasant; poorvang". W(earlier): Ma/Sa.
+- Dhani: Kafi; Ga/Ni; sarvakalik or 12-3pm (app Night); "light playful; shringar or bhakti; kshudra raag".
+- Patdeep: Kafi; Pa/Sa; 12-3pm; "eagerness, intrigue, separation pangs".
+- Chandrakauns: thaat not defined (Bhairavi or Kafi); Ma/Sa; 9-12pm (app Late night); "shuddha Ni produces anxiety and tension; uttarang".
+- Megh Malhar/Megh: Kafi; Ma/Sa; rainy season; "sweet, deep; dhrupad".
+- Miyan Malhar: Kafi; Pa/Sa (app Ma/Sa); 9-12pm or rains; Dha varjya avroh; "thunder, rain torrents".
+- Surdasi Malhar: Kafi; Ma/Sa; rains; uttarang; "less gambheer".
+- Brindavani Sarang: Kafi; Re/Pa; 9am-12 or afternoon; "noon, summer; neither deep nor playful".
+- Madhumad Sarang: Kafi; Re/Pa (app Re/Pa ok); 12-3pm; komal Ni only; "neither deep nor playful".
+- Bahar: Kafi; Ma/Sa; 9-12pm or spring; "playful; Shringar and Bhakti"; jod raags Basant Bahar, Bhairav Bahar, Malkauns Bahar, Adana Bahar, Bageshree Bahar.
+- Nayaki Kanada: Kafi; Ma/Sa (app Pa/Sa); 9-12pm (app Late night); Dha varjya; "dynamic, scintillating, enthusiasm".
+- Adana: Asavari; Sa/Pa; 9-12pm (app Late night; RG 12-3); "flittering dynamic; no meend/gamak".
+- Jaunpuri: Asavari; Dha/Ga; 9am-12; "deep; Bhakti and Shringar; sweet".
+- Darbari Kanada: Asavari; Re/Pa; 12-3am; "sweet and heavy; gamak and meend pradhan"; Tansen.
+- Todi: Todi; Dha/Ga; 9am-12; "deep; Bhakti and Karun ras".
+- Multani: Todi; Pa/Sa; 12-3pm; "heavy; devotional; meend pradhan".
+- Gurjari Todi: Todi; Dha/Re; 9am-12; Pa varjya; "karunya".
+- Madhuvanti: Todi; Pa/Sa; 3-6pm; "sweet, playful, romantic"; earlier called Ambika; recent.
+- Charukeshi: not defined; Ma/Sa (app Pa/Sa); 9am-12 (app Any); "very melodious; modern Carnatic import".
+- Kirwani: not defined; Pa/Sa (app Ga(k)/Ni); 9-12pm; "playful; thumri and film; virah".
+- Saraswati: T says Kalyan thaat!; Pa/Re; 9-12pm; "very sweet; Carnatic".
+- W Jog: Khamaj (via Tilang); uncited article. W Tilak Kamod: Re/Pa; 12-3am. W Puriya Dhanashree: Pa/Re; after sunset. W Bairagi: Bhairav; Ma/Sa; 6-9am. W Nat Bhairav: Bhairav; Ma/Sa; "heroic exuberance with slight pathos"; any season; cites tanarang.
+## Wikipedia batch A (W; note which cite RG/Kaufmann vs uncited)
+- Malkauns W: Bhairavi; Ma/Sa; 12-3; "serious, meditative; devotion and heroism; soothing, intoxicating"; Kauns family: Chandrakauns, Nandkauns, Pancham Malkauns; cites Danielou, Bagchee.
+- Bhairavi W: Bhairavi; Ma or Pa / Sa; morning + concluding; "rich devotional; queen of morning ragas; bhajan, thumri"; cites RG.
+- Bageshri W: Kafi; Ma/Sa; 9-12pm; "waiting for reunion with lover"; oddly says Hasya rasa (dubious); cites RG.
+- Darbari W: Asavari; Re/Pa; midnight; "grave; profound; sadness, longing, romance (Carnatic view)"; similar Kaunsi Kanada, Adana; cites Bhatkhande, Subba Rao.
+- Todi W: Todi; Dha/Ga; 9-12am; "pensive, mournful, relieved by festive drut"; variants Gujari, Bilaskhani, Desi, Hussaini, KRA, Bahaduri; cites RG, Kaufmann.
+- Marva W: Marva; re/Dha; sunset 4-7pm; "longing/separation; heroic; quiet contemplative gentle love; anxiety and solemn expectation"; similar Puriya, Sohni, Malavi, Maru, Purva Kalyan, Bhatiyar, Mali Gaura; cites Bagchee, RG, Jairazbhoy, Kaufmann, Moutal.
+- Puriya W: Marwa; Ga/Ni; just after sunset; "Shanti, Gambhir"; cites RG.
+- Shree W: Poorvi; re/Pa; after sunset; season "winter" (Sikh encyclopedia source, weak); Jasraj: "grace and majesty; devotion and dedication; seriousness".
+- Purvi W: Poorvi; Ga/Ni; 3-6pm; ragamala: "pangs of separation"; "deeply serious, quiet, somewhat mystical"; cites Kaufmann, Bhatkhande.
+- Basant W: Purvi; Sa/Pa; any time in spring; "hope, new beginning; quiet joy"; variants Shuddha Basant, Adi Basant, Basant Bahar, Hindol Basant; cites RG.
+- Lalit W: Poorvi; shuddha Ma/Sa; 3-6am; "serene and devotional"; cites RG p104, Lavezzoli.
+- Bhatiyar W: Marva; Ma/Sa; 3-6am; similar Mand; SD Burman favourite; cites RG, Oxford Enc.
+- Ramkali W: Bhairav; Pa/Sa; 6-9am; cites only tanarang.
+- Ahir Bhairav W: Bhairav; Dha/Re (T Ma/Sa) CONFLICT; 6-9am; uttarang; cites RG, Kaufmann, Bagchee, Subba Rao.
+- Bhairav W: Bhairav; Dha/Re; daybreak; any season; "solemn peacefulness; serious, introverted, devotional; shaant aur gambhir"; many variants listed; cites RG, Oxford Enc.
+- Kafi W: Kafi; Pa/Re (T Pa/Sa); 9-12pm; any season; "both shringars; folk lineage"; cites Bhatkhande, Lochana.
+- Khamaj W: Khamaj; Ga/Ni; 9-12pm; thumri/tappa; similar Desh, Khambavati; cites RG, Oxford.
+- Desh W: Khamaj; Re/Pa; 12-3am or 9-12; similar Sarang, Sorath, Tilak Kamod; patriotic; cites Nagarkar, Subba Rao, Mathur.
+- Jhinjhoti W: Khamaj; Ga/Ni; 2nd prahar night; "light and playful"; equivalent Khambavati.
+- Rageshree W: Khamaj; Ga/Ni; 2nd prahar night; "light romantic mood"; uncited.
+- Tilang W: Khamaj; Ga/Ni; 2nd prahar night; similar Jog; cites Subba Rao.
+- Gorakh Kalyan W: Khamaj; Ma/Sa; 9-12pm; similar Durga, Bageshri; from Gorakhpur song; cites RG p72.
+- Chandrakauns W: 12-3am; alt Chandrakosh; cites RG.
+- Megh Malhar W: Kafi; Sa/Pa; monsoon; "invitation to rains" (Jasraj); weak sources.
+- Malhar (Shuddha Malhar) W: Kafi; Ma/Sa; monsoon; "dark clouds, longing in separation"; variants: Shuddha, Miyan ki, Megh, Gaud, Ramdasi, Sur, Nat, Dhulia, Meera ki; cites Bhatkhande, RG, Banerjee Raag Malhar Darshan.
+- Adana W: Asavari; Sa/Pa; 12-3am; cites RG.
+- Asavari W: Asavari; Dha/Ga; 9-12am; "renunciation and sacrifice"; cites RG.
+## Wikipedia batch B
+- Jaunpuri W: Asavari; Dha/Ga; 9-12am; "grandeur or awe"; Sultan Hussain Sharqi; Omkarnath: indistinguishable from shuddha-Re Asavari.
+- Pilu W: Kafi; Ga/Ni; 3rd part of day; monsoon; "cheerful, joyous, moving"; similar Kirwani, Gara; cites Jairazbhoy, Bhatkhande, RG.
+- Jogiya W: Bhairav; Ma/Sa; dawn/brahma muhurta; "meditative, yogi"; cites only tanarang.
+- KRA W: Bhairavi; Dha/Ga; 9-12; cites RG, Oxford.
+- Gurjari W: Todi; Dha/Re; 9-12; nine Gujari forms in Sikh tradition.
+- Madhuvanti W: Todi; 4-8pm; "gentle loving sentiment; sringara"; similar Multani, Bhimpalasi, Patdip; cites Subba Rao.
+- Kirwani W: no thaat; no strict vadi (Re ga Pa dha important); midnight; similar Pilu; cites Jairazbhoy, RG.
+- Bilaskhani W: Bhairavi; dha/ga; 6am-12; "devotional, Bhakti"; similar Bahaduri Todi, KRA; cites RG, Parrikar.
+- Bhupal Todi W: Bhairavi; Dha/Ga; 6-9am; season spring(!); cites Subba Rao, RG.
+- Hamsadhvani W: Bilaval; Re/Pa; 9-12pm; introduced by Aman Ali Khan, popularised by Amir Khan; cites RG p80.
+- Alhaiya W: Bilaval; Dha/Ga; 6-9am; "Shant rasa"; variants Shuddha, Devgiri, Shukla, Kakubh Bilawal; cites RG.
+- Gaud Sarang W: Kalyan; Ga/Dha; 12-3pm; similar Kedar Chhayanat; national anthem debate; cites RG, Oxford.
+- Brindavani Sarang W: Kafi; Re/Pa; 12-3pm; summer; "sringara + veer; spiritual love"; Swami Haridas; cites Yagnik, RG.
+- Yaman W: Kalyan; Ga/Ni; 9pm-12; "soothing auspicious (ragamala); Kamdeva; varies"; Sa,Pa weak in ascent; cites Oxford, Bhatkhande, RG, Kaufmann.
+- Multani W: Todi; Pa/Sa; 1-4pm; cites tanarang only.
+- Bhimpalasi W: Kafi; Ma/Sa; 12-3; similar Dhanashri, Dhani, Patdip, Pilu, Bageshree, Hamsakinkini, Patdeepaki; cites RG, Oxford.
+- Patdeep W: Kafi; Pa/Sa; afternoon; "chanchal"; similar Dhanashree, Dhani, Bhimpalasi, Hamsakinkini, Patdeepaki; cites tanarang.
+- Gaud Malhar W: Bilaval; Ma (some Pa)/Sa; any time; monsoon; "serious, thoughtful; virahini"; cites RG, Bhatkhande, Radha Govind Sangit Sar.
+- Bahar W: Kafi; Ma/Sa; mid-night or spring; "Shringara"; Amir Khusrau attribution; similar Shahana Kanada, Basant Bahar, Adana Bahar; cites RG.
+- Sindhu Bhairavi W: Asavari(!); Dha/Ga; "viraha, shoka, karuna, bhakti"; cites Oxford.
+- Bilaval W: Dha/Ga; 4-7am; "deep devotion and repose"; cites RG, Sikh enc.
+## Parrikar (P) essays batch 1 — mood/character + variants (Parrikar's guru-source is Ramashreya Jha "Ramrang"; cites Bhatkhande HSP throughout)
+- Yaman P: "preeminent night-time raga, considerable gravitas"; Sa,Pa skipped in aroha (N' R G, m D N); Dha never nyasa; P->R coupling via m. Yaman Kalyan: shuddha Ma like a vivadi, sandwiched between Ga's.
+- Bhairav P: "one of the noblest; solemnity and purification"; andolita r and d; Pa skipped in ascent. Variants w/ musicians: Gunakali (S r M P d), Bairagi (S r M P n, Ravi Shankar 1940s), Anand Bhairav (shuddha Dha), Saurashtra Bhairav, Mangal Bhairav, Bhatiyari Bhairav, Bhairav Bahar, Ahir Bhairav (D n r S; Amir Khan), Virat, Kabiri, Shivmat (g and n), Devata, Beehad, Prabhat (Lalit-anga), Bhavmat, Ramkali (m P d n D P), Roopkali, Hussaini, Basant Mukhari (S r G M P d n), Kaushi Bhairav, Zeelaf (S G M P d), Devaranjani, Nat Bhairav (Ravi Shankar after Deodhar; = Carnatic Sarasangi), Asa Bhairav, Jaun Bhairav, Kalingada ("flippant, less austere; no andolan; folk and bhajans"), Jogiya ("powerful madhyam; gandhar/dhaivat skipped in aroha; little Bhairavanga").
+- Bhairavi P: "born in the solemn, haunting atmosphere of the cremation grounds; deeply cherished; customary conclusion of a mehfil"; all 12 swaras with discretion = Mishra Bhairavi; Ramrang: d and G vadi/samvadi. Sindhu Bhairavi = shuddha Re shade. Bilaskhani = "horse of an entirely different colour" (Todi-anga). Others: Jangla Bhairavi, Kasuri Bhairavi.
+- Todi P: r<->g interplay "ineffable unease, captivating"; Todi "every conceivable human emotion"; Gurjari = Pa omitted, komal Re accentuated; Bhupal Todi S r g P d; Bilaskhani "among the very great ragas... close to the sublime; meend-pradhan; skip arohi Ma, avarohi Pa"; KRA = Asavari Todi; Bahaduri Todi (both Re); Ahiri Todi; Salagavarali; Mangal Gujari; Khat Todi; Lachari Todi; Bairagi Todi (Ravi Shankar); Anjani, Desi Todi ("no Todi"), Jaiwanti Todi.
+- Marwa P: "introspective, meditative; languid youthful evenings"; r and D dominate, Pa omitted, khada swaras. Pooriya = same scale, G/N dominant, N-m coupling, "raat ki Pooriya". Sohani: "sprightly, instant pleaser, lighter than Marwa"; skips Re in aroha; D and G strength; uttaranga. Bibhas (Marwa thaat) S r G P D; Jait; Sohani-Pancham.
+- Poorvi P: gandhar-based; both Ma; "substitution of komal dhaivat introduces a new aesthetic ecosystem". Puriya Dhanashri: pancham-centred, "no better vehicle for the bathos-stricken"; all genres. Paraj: uttaranga, tar Sa; "chanchal prakriti"; Paraj-Kalingada fusion. Basant: uttaranga; Shree-anga; "gambheer"; [P] mG m G molecule. Part 2: Din-ki-Pooriya, Reva (S r G P d), Bibhas (Poorvi), Poorba, Triveni, Tankeshree, Malavi, Jaitashree, Dhavalshree, Hamsanarayani, Baradi, Deepak.
+- Malhars P: Shuddha Malhar S R M P D "ponderous gait, stately, dhrupad"; Gaud Malhar = Gaud+Shuddha Malhar+Bilawal, "among oldest, predates Miyan"; Miyan Malhar = Malhar+Kanada, two nishads, andolita g, "Tansen lore"; Ramdasi Malhar sankeerna, 3+ flavours; Chhaya Malhar (Lalji Maharaj); Arun Malhar; Nat Malhar mentioned.
+- Sarang P: Brindavani (both Ni; Re sthira, vadi); Madhmad (komal Ni only; = Carnatic Madhyamavati); Shuddha Sarang (both Ma; "most popular Sarang on concert circuit"); Miyan ki Sarang (Tansen legend); Samant, Badhans, Lankadahan, Salang, Dhulia, Saraswati Sarang, Ambika Sarang. Gaud Sarang "contains no Sarang anga".
+- Kanada P: Darbari "monumental, unparalleled gravitas; poorvanga; andolita g; Re vadi, Pa repose". Adana "lithe, full of gusto; uttaranga; no meend; svelte vs ponderous". Suha (Dha varjit), Sughrai (Kanada+Sarang, Pa nyasa), Nayaki ("poorvanga redolent of Darbari"), Shahana (shuddha Dha nyasa), Raisa, Devsakh, Bhavsakh, Ramsakh; Kaunsi, Abhogi, Kafi Kanada, Bageshree Kanada, Husseini, Basanti, Gunji, Mudriki.
+- Asavari P: "solemn, satvic"; three Re variants; P->g with hint of M. Jaunpuri "lightness of touch vs solemn Asavari; energy"; Omkarnath: identical to shuddha-Re Asavari; Jaunpuri has extinguished shuddha-Re Asavari. Gandhari (two Re; no consensus). Devgandhar (add shuddha Ga). Khat (sankeerna, andolita d). Shobhavari, Audav Asavari.
+- Bilawal P: Alhaiya "sumptuous Indian breakfast"; Dha vadi not nyasa; komal Ni optional. Devgiri (Shuddha Kalyan graft; Sarangdeva's town). Yamani (teevra Ma splice). Kukubh (Jaijaivanti+Jhinjhoti chhaya), Shukla (Khamaj strands, deergha Ma), Sarparda, Shuddha Bilawal (no consensus), Hameer Bilawal, Nat Bilawal (S R, R G, G M, G M R S), Bangal, Lacchasakh, Sukhiya, Jaij, Gaud Bilawal, Champak, Narayani Bilawal.
+- Khamaj P: "kshudra prakriti, thrives in thumri/dadra"; D-M-G arc; Re absent aroha. Jhinjhoti "warm, incandescent; principal raga of Khamaj thaat by some". Khambavati (Khamaj+Jhinjhoti+Mand; G M->S). Tilang "exceedingly sweet (karnapriya)". Kambhoji (Dagar). Khokar, Champak, Deepak (Khamaj), Khamaji Bhatiyar, Gavati/Bheem. Mentions Gara, Kalavati, Sindhura, Mand, Rageshree, Nand.
+- Des P: "rooted in the soil; unparalleled charm; seductive allure"; Re nyasa & gravity; D->M->G->R meend; kshudra prakriti. Sorath ("virtually extinct; Des's progenitor; Ga hidden"). Tilak Kamod ("no Kamod in it; nyasa on mandra Ni; S"->P swoop; astounding beauty"). Jaijaivanti (two versions: Des-anga dominant, Bageshree-anga; R g R S artifact; Des+Gaud+Bilawal chhayas).
+- Bhimpalasi P: "irresistible potency; ati-madhur, ati-priya"; Ma nyasa bahutva; from Dhanashree. Dhani "kshudra, chanchal, lighter; Ga emphasis". Patdeep "Dhanashree raganga; Pa top billing; Ni nyasa". Hamsakinkini (2 Ga 2 Ni), Pradeepaki, Dhanashree (almost defunct).
+- Shankara P: "fierce, heroic, mercurial; moments of serene stillness; Shiva's nature"; shadava (no Ma); Dha subdued; zigzag tans. Shankara Bharan, Shankara Karan, Shankara-Bihag, Malashree (S G P N).
+- Malkauns P: "shanta-gambheera rasa"; all five nyasa-worthy; g->S meend; Ma centre of gravity. Pancham Malkauns, Sundarkauns, Sampoorna Malkauns (Atrauli-Jaipur), Kaushi/Kaushiki, Chandrakauns (old Bageshree-anga S g M D n; modern Gwalior S g M d N "default"; Agra with n and P), Kaishiki Ranjani, Madhukauns (S g m P n), Harikauns, Devkauns.
+- Bageshree P: "ancient and encompassing; reverence and popularity; even women and children entranced"; Ma centre of gravity; 3 jatis; Pa in avarohi "delicious frisson". Malgunji (Khamaj+Bageshree, Gwalior). Rageshree ("Bageshree-anga w/ Khamaj; powerful Ma; Pa varjya"). Khamaj-thaat Durga/Madhuradhwani. Rajeshwari.
+- Bihag P: "melodic gravitas; raganga raga"; historically hidden teevra Ma now prominent; weak R, D. Variants: Chhaya Bihag, Chandni Bihag, Savani, Hem Bihag, Manjari Bihag, Swanandi, Gagan Vihang, Bihagda, Pat Bihag, Nat Bihag, Shankara Bihag, Maru Bihag.
+- Jog P: Tilang + komal Ga in vakra avarohi; Khamaj-based; both Ni (Agra bi-nishad); "leisurely, meend, immensely popular"; Pa nyasa. Jogkauns (Gunidas, late 1940s).
+- Multani P: "big raga, gravitas"; r,d dropped in ascent; g raised via m; Pa emphasis. Madhuvanti/Ambika: early 1940s, Vilayat Khan & Wamanrao Padhye independently; "pleasing but lacks Multani's gravitas"; late afternoon. Hemavati, Anjani Kalyan.
+## Parrikar batch 2
+- Kamod P: "luxuriant, fertile tonal canvas"; strands of Malhar, Hameer, Kalyan; overlap with Kedar, Chhayanat; anga G M P G M R S. Shyam Kalyan: Kalyan framework + Kamod signature; avarohi nyasa on R; vs Shuddha Sarang.
+- Kedar P: "named after Shiva; preeminent; beloved by laity and connoisseurs"; D->M glide indispensable; Ga sparse in aroha; variants Chandni, Maluha, Jaladhar (S R M P D), Deepak Kedar, Basanti, Nat Kedar, Adambari, Kedar-Bahar, Tilak Kedar, Shyam Kedar, Anandi Kedar, Shuddha Kedar.
+- Hameer P: "vigorous, dramatic; tension and release; Dha nyasa central to heroic essence (veera rasa)"; Bilawal anga despite Kalyan thaat; m in shadow of Pa.
+- Nand P: "pinnacle of musical creativity; deft synthesis"; G, M D P R S; Ga nyasa, elongated shuddha Ma; echoes Hameer, Kalyan, Bihag.
+- Gaud Sarang P: "Din ki Bihag; delicate, intricate; abstract raga"; S G R M G cluster; m supportive; occasional komal Ni vivadi.
+- Charukeshi P: "uncrystallised entity in Hindustani imagination"; janya of 26th mela; poorvanga Nat-like, uttaranga Asavari/Bhairavi; Amir Khan, Ratanjankar.
+- Shree P: "forbiddingly austere, profoundly meditative"; r-P coupling vadi/samvadi; meend-pradhan, vakra; S r P strong.
+- Lalit P: prachina; Lalitanga = two Ma successive "talk to each other"; shuddha Ma nyasa; Poorvi (komal d) modern, Marwa (shuddha D) Bhatkhande. Gouri: "Gouritual" mandra Ni; Bhairav/Poorvi/Marwa variants. Lalita-Gouri: Lalitanga + Gouri; vakra; zigzag tans; Ramrang, Kesarbai, Mansur etc.
+- Bhatiyar P: "heralds the day's first light; kitchens stirring; dhaivat lingering, meditative"; S->D leap from Marwa; avarohi nyasa on Ma; abstract raga; from Mand + Marwa.
+- Bhoopali P: Kalyan-anga; nyasa S R G P; G-centred; poorvanga. Deshkar: Bilawal-anga; D-centred; uttaranga; nyasa P D S"; Re alpa. Shuddha Kalyan/Bhoop Kalyan: "elegiac, meditative"; P-m-G and S"-N-D meends; Kirana specialty. Also Jait Kalyan (S R G P D), Savani Kalyan, Bhoopeshwari (S R G P d "grave, haunting"), Pahadi (Bhoopali-derived folk; mandra/madhya).
+- Desi P: Kafi with Asavari influence; vakra; 3 dhaivat flavours; P and R nyasa; "requires significant training".
+- Kafi P: kshudra, folk, hori/dadra/thumri/bhajan; latitude for ranjakatva; variants Sindh Kafi (komal d), Zilla Kafi (shuddha Ga), De-Kafi, Bengali Kafi; Mishra Kafi. Sindhura (Sangeeta Ratnakara desi raga; uttaranga; Ga absent aroha). Barwa (Kafi+Sindhura+Desi; prolonged Ma; Agra). Neelambari (Omkarnath). Piloo: "essentially a dhun; least structured; all 12 swaras visitation rights; nyasa on Ga and mandra shuddha Ni".
+- Nats P: Raganga Nat (M-centric; strong R, P; rarely standalone; Mansur). Chhayanat: Chhaya+Nat; P->R swoop; "rishab is the lifeblood"; m only in kans; many musicians.
+- Narayani P: Khamaj; Ga varjit; avarohi pause on Dha; Durga avirbhava. Gorakh Kalyan: Khamaj; "dulcet-toned"; Ma nyasa bahutva; avarohi nyasa on mandra komal Ni; Pa minor.
+- Bhinna Shadaj/Kaushik Dhwani P: S G M D N; "Audav Bilawal"; Hemant season, first quarter of day; shastric bhava shanta-gambheer (also bhayanaka/bibhatsa per old texts); Ma-centric; cites Brhaddesi, Ratnakara, Raga Vyakarana, Raganidhi.
+- Maru Bihag P: Kalyan + Bihag angas; teevra Ma vs Bihag shuddha; "creation of Alladiya Khan" (Raga Darshan says descends from Maru).
+- Bihagda (Bihag + komal Ni, Khamaj-infused), Pat Bihag (chalan-bheda of Bihag; glowing shuddha Ma).
+- Hem Kalyan (all shuddha, weak Ni; "no explicit Kalyan"), Khem Kalyan (Hamsadhwani+Yaman Kalyan; Agra; "among most charming; obscure").
+## Candidate additions (tanarang T unless noted) — thaat; vadi/samvadi; time; scale; mood; related
+- Jaijaivanti: Kafi (P/RG: Khamaj-Des anga); Re/Pa; 9-12pm; both Ga both Ni; "sweet and touching; broad appeal; intricate"; RG entry exists. STRONG candidate (RG, T, P, W all).
+- Chhayanat (Chhayanut): Kalyan; Pa/Re; 9-12pm; both Ma; "heavy atmosphere; sweet; overpowers"; RG: "heroic (vira) sentiment; passionate warrior"; P: "rishab is lifeblood; P->R swoop". STRONG.
+- Shyam Kalyan: Kalyan; Pa/Sa; 6-9pm; both Ma, Dha varjya aroha; "very melodious; Kalyan+Kamod"; P. STRONG.
+- Maru Bihag: Kalyan; Pa/Sa; 9-12pm; Re Dha varjya aroha; teevra Ma; "very melodious"; RG entry; P: Alladiya Khan creation. STRONG.
+- Puriya Kalyan: Marwa; Sa/Pa; 3-6pm; "Puriya poorvang + Yaman uttarang"; RG entry. STRONG.
+- Abhogi (Kanada): Kafi; Ma/Sa; 9-12pm; S R g m D; "deep atmosphere"; RG: Carnatic import, Kanada movements. STRONG.
+- Shivranjani: Kafi; Pa/Sa; 9-12pm/midnight; S R g P D; "melodious, straightforward"; W list night; chandrakantha has page. STRONG (film-famous).
+- Kalawati: Khamaj; Pa/Sa; 9-12pm; S G P D n; "simple, melodious; shringar, virah, bhakti"; RG list has Kalavati? (RG list from search mentioned it? no). Medium-strong.
+- Kaushik Dhwani/Bhinna Shadja: Bilawal; Ma/Sa; 9-12pm; S G m D N; "deep, soothing"; P: shanta-gambheer; Hemant season. STRONG.
+- Kausi Kanada: Asavari; Ma/Sa; 12-3am; Malkauns+Kanada; "sweet melodic; meend, khatka, gamak". STRONG.
+- Malgunji: Kafi; Ma/Sa; 12-3am; both Ga both Ni; "very melodious; heavy"; P: Khamaj+Bageshree, Gwalior. Medium.
+- Desi: Kafi (or Asavari); Pa/Sa; 6-9am (RG: late morning 9-12); vakra; RG entry; P essay. STRONG.
+- Sindhura: Kafi; Sa/Pa; 3-6pm; "light flittering; thumri, tappa, hori; uttarang"; P: Sangeeta Ratnakara desi raga. Medium-strong.
+- Gunkali: Bhairav; Dha/Re; 6-9am; S r m P d; "epitome of Bhakti and Karuna; meend". P: Gunakali. Medium.
+- Ramdasi Malhar: Kafi; Ma/Sa; rains; both Ga both Ni; "melodious; soothing and heavy"; P: sankeerna. Medium.
+- Shahana Kanada: Kafi; Pa/Sa; 12-3am; "uttarang; Dha and Pa rest"; RG entry; P. STRONG.
+- Basant Mukhari: Bhairav; Pa/Sa; 9am-12; S r G m P d n; "sweet, soothing, difficult"; M15 used it; P: Ratanjankar. Medium.
+- Bihagda: Bilawal; Ga/Ni; 9-12pm; Bihag+Khamaj; "virah"; P. Medium.
+- Khambavati: Khamaj; Ga/Dha; 9-12pm; ~Jhinjhoti; "pleasingly sweet"; P. Medium.
+- Jait/Jayat: Marwa; Pa/Sa; 3-6pm; S r G P D; P. Medium-low.
+- Hemant: Bilawal; Ma/Sa; 9-12pm; S G m D N + P R in avroh; "deep soothing". Medium-low.
+- Vachaspati: no thaat (Carnatic); Sa/Pa; 3-6pm; S R G M P D n; "melodious, not in vogue". Low-medium.
+- Jogkauns: Bhairavi (T) / Malkauns-based (P); Ma/Sa; 12-3am; Gunidas 1940s; P: "masterpiece". Medium.
+- Madhukauns: Kafi; Pa/Sa; 9-12pm; S g M P n; "virah; meend"; P: graha-bheda of Chandrakauns. Medium.
+- Suha/Sughrai: Kafi; disputed vadi; 9am-12; Dha varjit; "uttarang; romance, separation"; P. Medium-low.
+- Dev Gandhar: Asavari; Dha/Ga; 9am-12; both Ga; "very sweet"; P. Low-medium.
+- Narayani: Khamaj; Sa/Pa; 9-12pm; S R m P D n; "soothing; Carnatic"; P. Low-medium.
+- Yamani Bilawal: Bilawal; Sa/Pa; 6-9am; both Ma; P. Low-medium.
+- Gauri (Bhairav ang): Bhairav; Re/Pa; 3-6pm; "compassion, piety, viraha"; P: Gouritual. Medium.
+- Others in RG not in app: Manj Khamaj, Deshi(=Desi), Puriya Kalyan, Shahana, Chayanat, Jaijaivanti, Abhogi, Maru Bihag, Kaunsi? (no), Sindhura (yes in RG list? RG list had 'Sindhura'? The archive list: yes "Sindhura" was found in rg.json).
+- ragajunglism (RJ) Malkauns: mood "severe tranquility; mournful yet stable; austere contemplation; empathy and seething rage"; veera; Parvati legend; cites Lochana, Pundarika, RG, Ali Akbar College, Ebeling. RJ Todi: "existential anguish; playfulness of a newborn; every emotion"; cites Parrikar, Lavezzoli.

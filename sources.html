@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sources</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<header>
+  <div class="header-ornament">॥ प्रमाण ॥</div>
+  <h1>The <em>Sources</em></h1>
+  <p class="subtitle">Where every fact on this site comes from, and how far each source can be trusted</p>
+  <div class="divider"></div>
+</header>
+
+<div class="info-intro">
+  <p>Every raag on this site was checked against at least two sources of different lineage. A fact is treated as corroborated only when two lineages agree: the Raga Guide or another tier-1 book, tanarang (Gwalior pedagogy), Parrikar (the Ramrang line), or a Wikipedia page that itself cites a tier-1 book. Aggregators are listed for completeness but are not counted as independent votes. The ras assigned to each raag is a reading of the mood language in these sources, weighted by tier, with a confidence grade shown in each raag's detail panel. The full working is in the <a href="research.html">research notes</a> and the <a href="research-evidence.html">evidence file</a>.</p>
+</div>
+
+<div class="doc" id="source-list"></div>
+
+<div class="doc">
+  <h2>Historical works reached through the above</h2>
+  <p>Sarngadeva's <em>Sangita Ratnakara</em> (13th century); Meshakarna (1570); Somanatha's <em>Raga Vibodha</em> (1609); Damodara's <em>Sangita Darpana</em> (c. 1625); Ahobala's <em>Sangita Parijata</em> (1665); Faqirullah's <em>Rag Darpan</em> (1666); Lochana's <em>Raga Tarangini</em>; Pratap Singh's <em>Sangit Sar</em> (c. 1800); the ragamala paintings catalogued in the Raga Guide. These supply the oldest mood assignments and are cited on the raag pages through the Raga Guide and Parrikar, not consulted directly.</p>
+  <h2>Excluded</h2>
+  <p>Rao et al., <em>Bi-Sampling Approach to Classify Music Mood leveraging Raga-Rasa Association</em> (arXiv 2203.06583, 2022): its raga–rasa table is Carnatic-heavy and rests on unnamed "expert opinion". Swarganga's database was read but not cited, as it states no methodology.</p>
+</div>
+
+<footer>
+  Hindustani Classical Music — Raag Compendium &nbsp;·&nbsp; Ras per Bharata Muni's Natyashastra
+  <div class="footer-links"><a href="sources.html">Sources</a> · <a href="research.html">Research notes</a> · <a href="research-evidence.html">Evidence file</a></div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+const list = document.getElementById('source-list');
+const order = ['RG','BH','B99','M15','T','P','CK','DR','ARCE','W','SK','RJ'];
+const tierLabel = { 1: 'Tier 1 — primary or peer-reviewed', 2: 'Tier 2 — expert, single lineage', 3: 'Tier 3 — aggregator; counts only when it cites tier 1' };
+let lastTier = null;
+order.forEach(tag => {
+  const s = sourceCatalog[tag];
+  if (s.tier !== lastTier) {
+    const h = document.createElement('h2'); h.textContent = tierLabel[s.tier]; list.appendChild(h); lastTier = s.tier;
+  }
+  const used = raags.filter(r => (raagDetails[r.name].sources || []).some(x => x.tag === tag)).length;
+  const card = document.createElement('div');
+  card.className = 'source-card tier-' + s.tier;
+  card.innerHTML = `
+    <h3><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></h3>
+    <div class="src-meta"><span class="src-tag">${tag}</span>${s.by}${used ? ` · cited on ${used} raag${used === 1 ? '' : 's'}` : ''}</div>
+    <p>${s.note}</p>`;
+  list.appendChild(card);
+});
+</script>
+</body>
+</html>

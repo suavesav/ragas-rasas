@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Nine Ras</title>
+<title>The Ras</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
@@ -14,19 +14,20 @@
 
 <header>
   <div class="header-ornament">॥ नवरस ॥</div>
-  <h1>The Nine <em>Ras</em></h1>
+  <h1>The <em>Ras</em></h1>
   <p class="subtitle">The emotional essences of Bharata Muni's Natyashastra</p>
   <div class="divider"></div>
 </header>
 
 <div class="info-intro">
-  <p>Ras (रस) — literally "juice" or "essence" — is the theory of aesthetic emotion at the heart of all Indian classical arts. Formulated by the sage Bharata Muni in the <em>Natyashastra</em> (c. 200 BCE–200 CE), the doctrine holds that art does not express the artist's personal emotion but rather distills universal emotional essences that the audience <em>tastes</em>. A listener does not feel sad when hearing Karuna ras; they experience the aesthetic form of sadness — purified, impersonal, and beautiful. The original eight ras were later expanded to nine with the addition of Shanta by the Kashmiri aesthetician Abhinavagupta.</p>
+  <p>Ras (रस) — literally "juice" or "essence" — is the theory of aesthetic emotion at the heart of all Indian classical arts. Formulated by the sage Bharata Muni in the <em>Natyashastra</em> (c. 200 BCE–200 CE), the doctrine holds that art does not express the artist's personal emotion but rather distills universal emotional essences that the audience <em>tastes</em>. A listener does not feel sad when hearing Karuna ras; they experience the aesthetic form of sadness — purified, impersonal, and beautiful. The original eight ras were later expanded to nine with the addition of Shanta by the Kashmiri aesthetician Abhinavagupta. This site adds a tenth, Bhakti (devotion), which the Vaishnava theorist Rupa Goswami raised to the status of a ras in the sixteenth century and which the Hindustani sources use more often than any other single mood word.</p>
 </div>
 
 <div class="info-grid" id="ras-grid"></div>
 
 <footer>
   Hindustani Classical Music — Raag Compendium &nbsp;·&nbsp; Ras per Bharata Muni's Natyashastra
+  <div class="footer-links"><a href="sources.html">Sources</a> · <a href="research.html">Research notes</a> · <a href="research-evidence.html">Evidence file</a></div>
 </footer>
 
 <script>
@@ -38,7 +39,7 @@ const ras = [
     color: "#e080b0",
     deity: "Vishnu",
     description: "The king of ras and the most musically fertile of the nine, Shringar encompasses the full spectrum of love: the joy of union (sambhoga shringar) and the ache of separation (vipralambha shringar). In Hindustani music it is omnipresent — the majority of raags carry Shringar as a primary or secondary ras, reflecting the centrality of love as the supreme aesthetic experience. Shringar is not personal longing but its distilled, universal form: beauty itself, made audible.",
-    raags: "Yaman, Bhoopali, Bageshri, Bhimpalasi, Puriya Dhanashri, and many others"
+    raags: "Bageshri, Bhimpalasi, Khamaj, Des, Kafi, Kalingada, Sohini, Madhuvanti, and many others"
   },
   {
     name: "Karuna",
@@ -47,7 +48,7 @@ const ras = [
     color: "#8898e0",
     deity: "Yama",
     description: "The ras of grief, compassion, and pathos — and perhaps the most deeply explored ras in Hindustani music. Karuna is not personal sadness but the aesthetic experience of sorrow rendered universal: the listener does not weep for themselves but touches the fundamental human condition of loss. The dawn hours are Karuna's domain, and the great morning raags — Todi, Bhairav, Bhairavi — together with the late-night Darbari are among the most profound expressions of this ras in any musical tradition.",
-    raags: "Miyan ki Todi, Bhairav, Darbari Kanada, Bhairavi, Bilaskhani Todi, Lalit"
+    raags: "Bhairavi, Miyan ki Todi, Gurjari Todi, Bilaskhani Todi, Asavari, Jogiya, Miyan ki Malhar, Puriya Dhanashri"
   },
   {
     name: "Shanta",
@@ -56,7 +57,16 @@ const ras = [
     color: "#80c080",
     deity: "Vishnu / Narayana",
     description: "The ninth and highest ras, added by the Kashmiri philosopher Abhinavagupta to Bharata's original eight. Shanta represents not the absence of emotion but its transcendence — the peace that lies beyond all striving, the stillness at the heart of all movement. In music, Shanta raags carry a sattvic clarity that neither excites nor depresses but simply opens. Abhinavagupta argued that Shanta is the foundational ras from which all others arise and into which all finally dissolve.",
-    raags: "Bhoopali, Durga, Shuddha Kalyan, Ramkali, Vibhas, Bairagi"
+    raags: "Yaman, Malkauns, Marwa, Puriya, Purvi, Alhaiya Bilawal, Durga, Shuddha Kalyan"
+  },
+  {
+    name: "Bhakti",
+    sanskrit: "भक्ति",
+    meaning: "Devotion",
+    color: "#90b8e0",
+    deity: "Vishnu / Krishna",
+    description: "Not one of Bharata Muni's nine, Bhakti was argued into the rank of a ras by Rupa Goswami in the Bhakti-rasamrita-sindhu (16th century) and has been treated as one by musicians ever since. It is the devotional stance: not the peace of Shanta, which withdraws, but love directed at the divine, which reaches. In the Hindustani sources consulted for this site it is the single most common mood word, applied above all to the dawn and early-morning raags of the Bhairav and Todi families and to the sunset raags Shree and Lalit. Tanarang names it outright for a dozen raags; the Raga Guide reports musicians describing Bhairav and Lalit as devotional.",
+    raags: "Bhairav, Lalit, Shree, Bhoopali, Kedar, Ahir Bhairav, Vibhas, Bairagi, Multani, Jaunpuri, Bhupali Todi"
   },
   {
     name: "Raudra",
@@ -65,7 +75,7 @@ const ras = [
     color: "#e07060",
     deity: "Rudra (Shiva)",
     description: "The ras of righteous fury, ferocity, and the terrifying aspect of divine power. In Hindustani music, Raudra appears less frequently than Karuna or Shringar, but where it does — in raags like Malkauns, Shankara, or Adana — it carries an unmistakable quality of compressed intensity. Raudra is not mere anger but the wrath of principle: the force that destroys in order to renew. Associated with fire, the midday sun, and Shiva in his Rudra aspect.",
-    raags: "Malkauns, Shankara, Adana, Nat Bhairav, Shree"
+    raags: "Adana carries it as a secondary ras; no raag in the sources is described with Raudra as its primary mood. The Raga Guide records an older view of Bhairav as 'awesome grandeur, horror and fright'."
   },
   {
     name: "Veer",
@@ -74,7 +84,7 @@ const ras = [
     color: "#e09840",
     deity: "Indra",
     description: "The ras of heroism, nobility, and courageous action. Veer in music is not aggression but elevation — the calm confidence of one who acts from principle rather than passion. Raags with Veer ras tend to have strong, direct phrase movements, bold interval leaps, and a quality of unstoppable forward momentum. The Veer ras is associated with the saffron color, the season of spring, and compositions celebrating great deeds and righteous enterprise.",
-    raags: "Hameer, Darbari Kanada, Adana, Nat Bilawal, Nat Malhar"
+    raags: "Hameer, Shankara, Adana, Darbari Kanada, Chhayanat, Megh, Nat Bhairav, Nayaki Kanada"
   },
   {
     name: "Adbhuta",
@@ -83,7 +93,7 @@ const ras = [
     color: "#b080e0",
     deity: "Brahma",
     description: "The ras of wonder, the marvelous, and the mysteriously beautiful. Adbhuta is the aesthetic experience of encountering something that exceeds ordinary understanding — not fear but the sublime. In Hindustani music it appears most vividly in the monsoon raags, the raags that omit Pa (like Chandrakauns, Marwa and Lalit), and the great twilight raags like Marwa and Puriya where tonal resolution is deliberately withheld. Adbhuta raags seem to open onto something vast and unnamed.",
-    raags: "Marwa, Lalit, Chandrakauns, Miyan ki Malhar, Megh, Puriya"
+    raags: "Miyan ki Malhar, Megh, Gaud Malhar, Sur Malhar, Chandrakauns, Bhatiyar (secondary in each)"
   },
   {
     name: "Hasya",
@@ -92,7 +102,7 @@ const ras = [
     color: "#d0b050",
     deity: "Pramatha",
     description: "The ras of joy, lightness, and laughter — from gentle humor to pure exuberance. In Hindustani music Hasya manifests as rhythmic playfulness, folk-tinged buoyancy, and the festive energy of seasonal celebrations. The spring raags (Bahar, Hindol, Basant) and the folk-influenced thumri raags carry the most Hasya, reflecting the ras's close association with the outdoor world, folk music, and communal celebration. Hasya raags tend toward pentatonic scales and simple, direct phrase movements.",
-    raags: "Hindol, Bahar, Basant, Kamod, Hansadhwani, Vrindavani Sarang"
+    raags: "Bahar, Dhani, Hansadhwani, Khamaj, Jhinjhoti, Kalingada, Basant, Sohini"
   },
   {
     name: "Bhayanaka",
@@ -101,7 +111,7 @@ const ras = [
     color: "#50b0a0",
     deity: "Yama / Kala",
     description: "The ras of fear, dread, and the uncanny. In its refined musical form, Bhayanaka is not mere fright but the profound unease of encountering the vast, the dark, and the incomprehensible — the eerie stillness of pre-dawn, the approaching monsoon storm, the ascetic silence that borders on the supernatural. Raags carrying Bhayanaka tend to use sparse textures, unusual omissions of stable swaras, and the particular quality of emptiness that creates unease in the listener.",
-    raags: "Lalit, Jogiya, Gandhari, Malkauns"
+    raags: "None of the sources consulted describes a raag with Bhayanaka; the Raga Guide notes only that superstitious musicians ascribe supernatural powers to Malkauns and Vibhas."
   },
   {
     name: "Bibhatsa",
