@@ -1,6 +1,6 @@
 # Raag research, round 2: sources, emotions, additions
 
-Date: 2026-09-10. Follows [raag-accuracy-audit.md](raag-accuracy-audit.md) (round 1, applied in PR #3). **Status: applied on 2026-09-10** (Bhakti added, §2 corrections, §3 ras table, §4 Tier-A additions, §5–6 fields and rendering).
+Date: 2026-09-10. Follows [raag-accuracy-audit.md](raag-accuracy-audit.md) (round 1, applied in PR #3). **Status: applied on 2026-09-10** (Bhakti added, §2 corrections, §3 ras table, §4 Tier-A additions, §5–6 fields and rendering, §8 season addendum).
 
 ## Summary
 
@@ -321,12 +321,11 @@ A competing scheme in the *Manasollasa* (Someshwara, 1131), reported by Deepak R
 
 **What survives in practice.** Deepak Raja: "the enthusiasm of the performing tradition has been limited largely to Vasanta (spring) and Varsha (rainy season)", because both seasons signify nature renewing itself. Shailaja Khanna in *The Tribune* reports the autumn, pre-winter and summer traditions as having "passed into oblivion". The Raga Guide is consistent with both: of 74 raags it names a season in the time field for only Bahar and Basant (spring), Gaud Malhar, Megh, Miyan ki Malhar and Sur Malhar (rains), plus Shree (winter) and a note that Kafi's hori belongs to Holi.
 
-**Changes applied**
+**Changes applied.** The ritu framework itself stays in this report rather than becoming a page in the app; the per-raag detail panels carry the associations and the season notes.
 
 - **Vrindavani Sarang → Summer** (rule). Corroborated by two lineages: tanarang, "the intensity of noon time and the summer season to which the melody is particularly oriented", and Wikipedia's season field citing Yagnik's *Shastriya Raag Darshan*. The Summer filter chip is restored.
 - **Associations added** (shown in the detail panel, not filterable as a rule): Hindol, Megh, Bhairav, Shree and Malkauns each carry their ritu-scheme slot with the treatises named; Bhairav additionally carries the Manasollasa's summer and a note that it is sung in any season today; Tilak Kamod carries monsoon on tanarang's single mention; Kafi carries the Holi link; Bahar carries the spring jod-raags; the four Malhars carry Varsha.
 - **`seasonNote` added** to Bhairav, Malkauns, Hindol, Shree, Megh and Vrindavani Sarang explaining rule versus history.
-- **New page `seasons.html`** ("The Six Ritu"), linked from the nav and every footer: the six seasons, both treatise schemes side by side, what survived and why, the app's raags listed by season split into rule and association, why the summer raags are thin, and a caution that season is convention rather than acoustics.
 - **New sources**: ARCE (vmis.in) for the ritu scheme; Shailaja Khanna, *The Tribune* (tier 3) for current practice; Deepak Raja's 2013 seasonal essay folded into his catalogue entry.
 
 **Not changed, and why.** Bhimpalasi, Patdeep, Multani, Madhuvanti and the other Sarangs stay at Any: their "summer" was a gloss on the afternoon hour, and no source gives them a season. Bhupal Todi's "spring" appears in one Wikipedia infobox against the Raga Guide's silence, so it stays out. Pilu's monsoon appears only in an unsourced infobox field. Des keeps monsoon as an association, from thumri and film rather than the treatises.
