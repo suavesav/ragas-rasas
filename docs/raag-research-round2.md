@@ -297,3 +297,36 @@ Also: add `Bhakti` to `rasClass` and the filter chips; add a `family` filter; sh
 5. Add `sources` and `rasEvidence` per raag from the notes file, and the schema changes in the renderer.
 
 Working notes with every extracted fact and source are in the scratch file `notes.md` from this session and can be moved into the repo on request.
+
+---
+
+## 8. Addendum: season, re-examined (2026-09-10)
+
+Round 1 stripped Summer, Autumn and Winter from the app on the grounds that no source supported them. That was right about the app's old values and wrong about the tradition: there **is** a documented six-season scheme, and stripping the field lost it. This addendum restores what is sourced and records the rest as association rather than rule.
+
+**The six ritu.** Vasant (spring), Grishma (summer), Varsha (monsoon), Sharad (autumn), Hemant (early winter), Shishir (deep winter).
+
+**The treatise scheme.** The raga-ragini systems were built on six patriarchal raags — the Raga Guide reproduces Damodara's (c.1625) version of the Hanuman scheme: Bhairav, Kaushik (Malkauns), Hindol, Dipak, Shri, Megh — and those six were mapped to the six seasons. The Archives and Research Centre for Ethnomusicology gives the most widely followed mapping, from the *Sangita Ratnakara* (13th c.) and *Sangita Darpana* (c.1625):
+
+| Ritu | Raag | Status here |
+|---|---|---|
+| Vasant | Hindol | season Spring (rule) |
+| Grishma | Dipak | not in the app; Parrikar: "all but dead" |
+| Varsha | Megh | season Monsoon (rule) |
+| Sharad | Bhairav | season Any; autumn as association |
+| Hemant | Shree | season Winter (rule) |
+| Shishir | Malkauns | season Any; winter as association |
+
+A competing scheme in the *Manasollasa* (Someshwara, 1131), reported by Deepak Raja, gives spring to Vasanta, summer to Bhairava, monsoon to Megh, autumn to Panchama, early winter to Natanarayana, deep winter to Shree. The two schemes agree only on Megh's monsoon and Shree's winter — which is why those two are treated as rules and the rest as history.
+
+**What survives in practice.** Deepak Raja: "the enthusiasm of the performing tradition has been limited largely to Vasanta (spring) and Varsha (rainy season)", because both seasons signify nature renewing itself. Shailaja Khanna in *The Tribune* reports the autumn, pre-winter and summer traditions as having "passed into oblivion". The Raga Guide is consistent with both: of 74 raags it names a season in the time field for only Bahar and Basant (spring), Gaud Malhar, Megh, Miyan ki Malhar and Sur Malhar (rains), plus Shree (winter) and a note that Kafi's hori belongs to Holi.
+
+**Changes applied**
+
+- **Vrindavani Sarang → Summer** (rule). Corroborated by two lineages: tanarang, "the intensity of noon time and the summer season to which the melody is particularly oriented", and Wikipedia's season field citing Yagnik's *Shastriya Raag Darshan*. The Summer filter chip is restored.
+- **Associations added** (shown in the detail panel, not filterable as a rule): Hindol, Megh, Bhairav, Shree and Malkauns each carry their ritu-scheme slot with the treatises named; Bhairav additionally carries the Manasollasa's summer and a note that it is sung in any season today; Tilak Kamod carries monsoon on tanarang's single mention; Kafi carries the Holi link; Bahar carries the spring jod-raags; the four Malhars carry Varsha.
+- **`seasonNote` added** to Bhairav, Malkauns, Hindol, Shree, Megh and Vrindavani Sarang explaining rule versus history.
+- **New page `seasons.html`** ("The Six Ritu"), linked from the nav and every footer: the six seasons, both treatise schemes side by side, what survived and why, the app's raags listed by season split into rule and association, why the summer raags are thin, and a caution that season is convention rather than acoustics.
+- **New sources**: ARCE (vmis.in) for the ritu scheme; Shailaja Khanna, *The Tribune* (tier 3) for current practice; Deepak Raja's 2013 seasonal essay folded into his catalogue entry.
+
+**Not changed, and why.** Bhimpalasi, Patdeep, Multani, Madhuvanti and the other Sarangs stay at Any: their "summer" was a gloss on the afternoon hour, and no source gives them a season. Bhupal Todi's "spring" appears in one Wikipedia infobox against the Raga Guide's silence, so it stays out. Pilu's monsoon appears only in an unsourced infobox field. Des keeps monsoon as an association, from thumri and film rather than the treatises.

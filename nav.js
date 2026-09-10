@@ -3,6 +3,7 @@
     { href: 'index.html',  label: 'Raags' },
     { href: 'rasas.html',  label: 'Ras' },
     { href: 'thaats.html', label: 'Thaats' },
+    { href: 'seasons.html', label: 'Seasons' },
     { href: 'sources.html', label: 'Sources' },
   ];
 
