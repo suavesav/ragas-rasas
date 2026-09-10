@@ -67,7 +67,7 @@ function updateStats() {
     visible === total ? `Showing all ${total} raags` : `Showing ${visible} of ${total} raags`;
 }
 
-// Filter state — each group holds a Set of selected values
+// Filter state: each group holds a Set of selected values
 const activeFilters = {
   ras:   new Set(),
   time:   new Set(),
