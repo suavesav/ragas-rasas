@@ -4,6 +4,7 @@
     { href: 'rasas.html',  label: 'Ras' },
     { href: 'thaats.html', label: 'Thaats' },
     { href: 'sources.html', label: 'Sources' },
+    { href: 'recommend.html', label: 'Recommend' },
   ];
 
   const current = location.pathname.split('/').pop() || 'index.html';
