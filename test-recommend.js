@@ -22,7 +22,7 @@ const rasNames = new Set(ctx.rasInfo.map(r => r.name));
 for (const r of raags) {
   check(KNOWN_TIMES.has(R.normalizeTime(r.time)), `${r.name}: unknown time "${r.time}"`);
   check(KNOWN_SEASONS.has(r.season), `${r.name}: unknown season "${r.season}"`);
-  check(thaatNames.has(r.thaat) || r.thaat === 'Mixed', `${r.name}: no thaatInfo for "${r.thaat}"`);
+  check(thaatNames.has(r.thaat) || r.thaat === 'Carnatic', `${r.name}: no thaatInfo for "${r.thaat}"`);
   for (const s of r.ras) check(rasNames.has(s), `${r.name}: no rasInfo for "${s}"`);
   check(ctx.raagDetails[r.name], `${r.name}: no raagDetails entry`);
 }

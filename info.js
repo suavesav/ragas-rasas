@@ -17,7 +17,7 @@ const rasInfo = [
     meaning: "Compassion & Pathos",
     color: "#8898e0",
     deity: "Yama",
-    description: "The ras of grief, compassion, and pathos — and perhaps the most deeply explored ras in Hindustani music. Karuna is not personal sadness but the aesthetic experience of sorrow rendered universal: the listener does not weep for themselves but touches the fundamental human condition of loss. The dawn hours are Karuna's domain, and the great morning raags — Todi, Bhairav, Bhairavi, Darbari — are among the most profound expressions of this ras in any musical tradition.",
+    description: "The ras of grief, compassion, and pathos — and perhaps the most deeply explored ras in Hindustani music. Karuna is not personal sadness but the aesthetic experience of sorrow rendered universal: the listener does not weep for themselves but touches the fundamental human condition of loss. The dawn hours are Karuna's domain, and the great morning raags — Todi, Bhairav, Bhairavi — together with the late-night Darbari are among the most profound expressions of this ras in any musical tradition.",
     raags: "Miyan ki Todi, Bhairav, Darbari Kanada, Bhairavi, Bilaskhani Todi, Lalit"
   },
   {
@@ -53,7 +53,7 @@ const rasInfo = [
     meaning: "Wonder & Mystery",
     color: "#b080e0",
     deity: "Brahma",
-    description: "The ras of wonder, the marvelous, and the mysteriously beautiful. Adbhuta is the aesthetic experience of encountering something that exceeds ordinary understanding — not fear but the sublime. In Hindustani music it appears most vividly in the monsoon raags, the pentatonic raags that omit Pa (like Chandrakauns and Lalit), and the great twilight raags like Marwa and Puriya where tonal resolution is deliberately withheld. Adbhuta raags seem to open onto something vast and unnamed.",
+    description: "The ras of wonder, the marvelous, and the mysteriously beautiful. Adbhuta is the aesthetic experience of encountering something that exceeds ordinary understanding — not fear but the sublime. In Hindustani music it appears most vividly in the monsoon raags, the raags that omit Pa (like Chandrakauns, Marwa and Lalit), and the great twilight raags like Marwa and Puriya where tonal resolution is deliberately withheld. Adbhuta raags seem to open onto something vast and unnamed.",
     raags: "Marwa, Lalit, Chandrakauns, Miyan ki Malhar, Megh, Puriya"
   },
   {
@@ -72,7 +72,7 @@ const rasInfo = [
     color: "#50b0a0",
     deity: "Yama / Kala",
     description: "The ras of fear, dread, and the uncanny. In its refined musical form, Bhayanaka is not mere fright but the profound unease of encountering the vast, the dark, and the incomprehensible — the eerie stillness of pre-dawn, the approaching monsoon storm, the ascetic silence that borders on the supernatural. Raags carrying Bhayanaka tend to use sparse textures, unusual omissions of stable swaras, and the particular quality of emptiness that creates unease in the listener.",
-    raags: "Lalit, Jogiya, Gandhari, Yogi, Malkauns"
+    raags: "Lalit, Jogiya, Gandhari, Malkauns"
   },
   {
     name: "Bibhatsa",
@@ -94,7 +94,7 @@ const thaatInfo = [
     time: "Evening",
     color: "#c9a84c",
     description: "The thaat of the evening, Kalyan's single defining characteristic is the tivra (sharp) Madhyam — a raised fourth degree that gives all Kalyan raags their characteristic open, luminous, reaching quality. This one alteration from the natural scale creates a sound of effortless expansiveness, as though the music is straining upward toward something beautiful just beyond grasp. The Kalyan family is the largest and most beloved group of evening raags in the repertoire.",
-    raags: "Yaman, Kedar, Hameer, Bhoopali, Hindol, Hansadhwani, Kamod"
+    raags: "Yaman, Shuddha Kalyan, Kedar, Hameer, Bhoopali, Hindol, Kamod, Shuddha Sarang, Gaur Sarang"
   },
   {
     name: "Bilawal",
@@ -104,7 +104,7 @@ const thaatInfo = [
     time: "Morning",
     color: "#f0e8d8",
     description: "The natural scale — all seven swaras in their unaltered, shuddha form. Equivalent to the Western major scale, Bilawal carries a quality of pure, sattvic brightness that is associated with the morning hours when the mind is clear and receptive. Despite (or because of) its simplicity, Bilawal has a vast number of derived raags, each finding a distinct emotional world within the same seven notes through different vadi-samvadi relationships, arohana-avarohana patterns, and characteristic phrase vocabularies.",
-    raags: "Bilawal, Alhaiya Bilawal, Bihag, Durga, Shankara, Saraswati, Charukeshi"
+    raags: "Bilawal, Alhaiya Bilawal, Bihag, Durga, Shankara, Hansadhwani, Pahadi, Gaud Malhar"
   },
   {
     name: "Khamaj",
@@ -114,7 +114,7 @@ const thaatInfo = [
     time: "Night",
     color: "#c47030",
     description: "Khamaj introduces the komal Ni in descent while using shuddha Ni in ascent — a characteristic that gives all Khamaj raags a folk-tinged, sensuous quality. The dual Ni treatment creates a natural flexibility that makes Khamaj the primary thaat for thumri, dadra, and light classical forms, where strict adherence to a single swara gives way to emotional directness. Khamaj raags tend to feel warm, accessible, and rooted in the outdoor, folk world.",
-    raags: "Khamaj, Des, Jhinjhoti, Rageshri, Pahadi, Tilak Kamod, Bahar, Pilu"
+    raags: "Khamaj, Des, Jhinjhoti, Rageshri, Tilak Kamod, Jog, Gorakh Kalyan, Tilang"
   },
   {
     name: "Bhairav",
@@ -123,8 +123,8 @@ const thaatInfo = [
     alteration: "Komal Rishabh & Komal Dhaivat",
     time: "Dawn",
     color: "#90a8c8",
-    description: "One of the oldest and most revered thaats, Bhairav flattens the second (Re) and sixth (Dha) degrees. These two komal swaras — positioned symmetrically around the central Pa — create a scale of austere, solemn gravity unlike any other. The characteristic andolan (oscillation) on both komal swaras is one of the most recognizable sounds in Hindustani music. Bhairav is the thaat of winter dawns, Lord Shiva, and the austere devotional tradition. Its raags are among the most ancient in the repertoire.",
-    raags: "Bhairav, Lalit, Jogiya, Ramkali, Vibhas, Bairagi, Ahir Bhairav"
+    description: "One of the oldest and most revered thaats, Bhairav flattens the second (Re) and sixth (Dha) degrees. These two komal swaras — positioned symmetrically around the central Pa — create a scale of austere, solemn gravity unlike any other. The characteristic andolan (oscillation) on both komal swaras is one of the most recognizable sounds in Hindustani music. Bhairav is the thaat of dawn, Lord Shiva, and the austere devotional tradition. Its raags are among the most ancient in the repertoire.",
+    raags: "Bhairav, Ahir Bhairav, Nat Bhairav, Jogiya, Ramkali, Vibhas, Bairagi, Kalingada"
   },
   {
     name: "Bhairavi",
@@ -134,7 +134,7 @@ const thaatInfo = [
     time: "Morning / Concluding",
     color: "#8898e0",
     description: "The most densely chromatic of the ten thaats, Bhairavi flattens all four alterable swaras — Re, Ga, Dha, and Ni. The result is a scale of extraordinary emotional richness, with no natural third, sixth, or seventh. This concentration of komal swaras creates the most 'minor' and melancholic sound in the system. Bhairavi is also the most 'mishra' (mixed) thaat in practice — its raags routinely incorporate swaras from other thaats for expressive effect, giving them unusual breadth and flexibility.",
-    raags: "Bhairavi, Malkauns, Sindhu Bhairavi, Sampoorna Malkauns"
+    raags: "Bhairavi, Malkauns, Sindhu Bhairavi, Bilaskhani Todi, Bhupali Todi, Komal Rishabh Asavari"
   },
   {
     name: "Kafi",
@@ -154,7 +154,7 @@ const thaatInfo = [
     time: "Morning",
     color: "#7a6130",
     description: "Asavari flattens three swaras — Ga, Dha, and Ni — creating a scale of austere, detached gravity. The three komal notes in the upper half of the scale (Ga, Dha, Ni) give Asavari raags their characteristic downward pull: the music seems to lean toward the lower register, contemplating rather than reaching upward. The characteristic vakra arohana of most Asavari raags (which skips Ga and Ni in ascent) reinforces this quality of subdued, dignified restraint. Asavari is one of the oldest recognized raags and thaat families.",
-    raags: "Asavari, Jaunpuri, Darbari Kanada, Adana, Kirwani, Gandhari"
+    raags: "Asavari, Jaunpuri, Darbari Kanada, Adana, Gandhari"
   },
   {
     name: "Todi",
@@ -164,7 +164,7 @@ const thaatInfo = [
     time: "Morning",
     color: "#b080e0",
     description: "The most ornate of the ten thaats and arguably the most harmonically complex scale in Hindustani music. Todi combines three komal swaras (Re, Ga, Dha) with a tivra Ma — the only thaat to use both a flattened and a sharpened note. The tivra Ma creates an extraordinary tension as it pulls upward against the komal swaras surrounding it. This concentration of alteration demands slow, deliberate performance and elaborate ornamentation; Todi raags cannot be rushed. The supreme Todi raag (Miyan ki Todi) is often called the most complete raag in the tradition.",
-    raags: "Miyan ki Todi, Multani, Bilaskhani Todi, Madhuvanti, Gujari Todi"
+    raags: "Miyan ki Todi, Gurjari Todi, Multani, Shuddha Todi, Madhuvanti"
   },
   {
     name: "Purvi",
@@ -174,16 +174,16 @@ const thaatInfo = [
     time: "Sunset",
     color: "#c87040",
     description: "Purvi thaat uses komal Re, tivra Ma, and komal Dha, creating a scale of profound twilight tension. The tivra Ma sits at the center of the scale, pulling against the komal swaras on either side, while the shuddha Ga provides an unexpected brightness that intensifies the surrounding shadows. The result is a scale perfectly suited to the sunset hour — poised between two worlds, neither resolving upward nor settling downward. Purvi raags carry an atmosphere of austere contemplation and spiritual urgency.",
-    raags: "Purvi, Shree, Puriya Dhanashri, Basant, Paraj"
+    raags: "Purvi, Shree, Puriya Dhanashri, Basant, Paraj, Lalit, Lalita Gauri"
   },
   {
     name: "Marwa",
     sanskrit: "मारवा",
     scale: "Sa Re(k) Ga Ma(t) Dha Ni",
-    alteration: "Komal Re; Tivra Ma; no Pa",
+    alteration: "Komal Re; Tivra Ma (Pa omitted in most Marwa raags)",
     time: "Sunset",
     color: "#2a8a7a",
-    description: "The most psychologically unsettled of the ten thaats, Marwa's defining characteristic is not an alteration but an omission: Pa, the most grounding and stabilizing of all swaras, is absent from all Marwa raags. Combined with komal Re and tivra Ma, this creates a scale without any stable anchor — the music reaches in all directions without finding rest. The tension between komal Re at the bottom and tivra Ma in the middle, with no Pa to mediate, is the sonic embodiment of suspension and incompleteness. Marwa is the thaat of restless twilight.",
-    raags: "Marwa, Puriya, Sohini, Bhatiyar, Bibhas"
+    description: "The most psychologically unsettled of the ten thaats, Marwa's defining characteristic is not an alteration but an omission: Pa, the most grounding and stabilizing of all swaras, is absent from Marwa itself and from most of its raags (Bhatiyar is the exception). Combined with komal Re and tivra Ma, this creates a scale without any stable anchor — the music reaches in all directions without finding rest. The tension between komal Re at the bottom and tivra Ma in the middle, with no Pa to mediate, is the sonic embodiment of suspension and incompleteness. Marwa is the thaat of restless twilight.",
+    raags: "Marwa, Puriya, Sohini, Bhatiyar"
   },
 ];

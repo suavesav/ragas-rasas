@@ -1,15 +1,16 @@
 // Raag recommender: pure logic (testable under node) + DOM code.
 // Globals expected in the browser: raags, raagDetails (data.js), rasInfo, thaatInfo (info.js).
 
-const BUCKETS = ['Late night', 'Pre-dawn', 'Dawn', 'Morning', 'Afternoon', 'Sunset', 'Evening', 'Night'];
+const BUCKETS = ['Late night', 'Pre-dawn', 'Dawn', 'Morning', 'Afternoon', 'Late afternoon', 'Sunset', 'Evening', 'Night'];
 
 function bucketForHour(h) {
   if (h <= 3) return 'Late night';
   if (h <= 5) return 'Pre-dawn';
   if (h <= 7) return 'Dawn';
   if (h <= 11) return 'Morning';
-  if (h <= 15) return 'Afternoon';
-  if (h <= 17) return 'Sunset';
+  if (h <= 14) return 'Afternoon';
+  if (h <= 16) return 'Late afternoon';
+  if (h <= 18) return 'Sunset';
   if (h <= 20) return 'Evening';
   return 'Night';
 }
@@ -165,9 +166,10 @@ if (typeof document !== 'undefined') {
       'Pre-dawn': '4am – 5am',
       'Dawn': '6am – 7am',
       'Morning': '8am – 11am',
-      'Afternoon': '12pm – 3pm',
-      'Sunset': '4pm – 5pm',
-      'Evening': '6pm – 8pm',
+      'Afternoon': '12pm – 2pm',
+      'Late afternoon': '3pm – 4pm',
+      'Sunset': '5pm – 6pm',
+      'Evening': '7pm – 8pm',
       'Night': '9pm – 11pm',
     };
 
@@ -525,8 +527,12 @@ if (typeof document !== 'undefined') {
 
       const timeLabel = normalizeTime(raag.time).toLowerCase();
       const borderCol = hexToRgba(rasColors.text, 0.4);
+      // Raags borrowed from the Carnatic system have no thaat, so no popover.
+      const thaatPill = raag.thaat === 'Carnatic'
+        ? `<span class="pill pill-time">carnatic · no thaat</span>`
+        : `<button type="button" class="pill pill-thaat" data-popover="thaat" data-name="${esc(raag.thaat)}" style="border-color:${borderCol}">${esc(raag.thaat)} thaat ${ICON_INFO}</button>`;
       revealPillsEl.innerHTML = `
-        <button type="button" class="pill pill-thaat" data-popover="thaat" data-name="${esc(raag.thaat)}" style="border-color:${borderCol}">${esc(raag.thaat)} thaat ${ICON_INFO}</button>
+        ${thaatPill}
         <button type="button" class="pill pill-ras" data-popover="ras" data-name="${esc(primaryRas)}" style="border-color:${hexToRgba(rasColors.text, 0.7)};background:${hexToRgba(rasColors.text, 0.2)}">${esc(primaryRas.toLowerCase())} ${ICON_INFO}</button>
         <span class="pill pill-time">${esc(timeLabel)}</span>
       `;
