@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accuracy <em>Audit</em></title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<header>
+  <div class="header-ornament">॥ परीक्षा ॥</div>
+  <h1>Accuracy <em>Audit</em></h1>
+  <p class="subtitle">Round one: the 97 original entries checked against published references</p>
+  <div class="divider"></div>
+</header>
+
+<div class="doc">
+<p><b>Status: all changes below were applied to <code>data.js</code>, <code>index.html</code>, <code>thaats.html</code> and <code>rasas.html</code> on 2026-09-10 (87 raags remain).</b></p>
+<p>Audit of the 97 raags in <code>data.js</code> (summary rows in <code>raags</code>, detail blocks in <code>raagDetails</code>) against published references. Date: 2026-09-10.</p>
+<h2>Summary</h2>
+<ul><li><b>What</b>: 97 raags checked for thaat, swaras, aroh/avroh, vadi/samvadi, time, season, and narrative claims.</li><li><b>Result</b>: 31 raags have wrong notes or wrong thaat. 19 more have wrong vadi/samvadi, wrong time, or missing aroh/avroh detail. 8 entries are duplicates of other entries. 1 entry (Yogi) could not be found in any reference.</li><li><b>Systematic issue</b>: the <code>season</code> field is invented for most raags. Only the Malhars (monsoon) and Basant, Bahar, Hindol, Bhairav Bahar (spring) have a real seasonal association. Bhairav, Lalit, Todi, Purvi, Shree, Marwa and the Sarangs do not.</li><li><b>Sources used</b>: tanarang.com, Rajan Parrikar Music Archive (parrikar.org), Wikipedia raga pages, ragajunglism.org, swarganga.org, indianclassicalmusic.com, chandrakantha.com. Where sources disagree the report says so.</li></ul>
+<p>Notation below follows the app: <code>(k)</code> komal, <code>(t)</code> tivra, <code>'</code> upper octave.</p>
+<h2>1. Duplicates and entries to merge or remove</h2>
+<div class="table-wrap"><table><thead><tr><th>Keep</th><th>Remove</th><th>Reason</th></tr></thead><tbody><tr><td>Des</td><td>Desh</td><td>Same raag, two spellings.</td></tr><tr><td>Vrindavani Sarang</td><td>Brindavani Sarang</td><td>Same raag, two spellings.</td></tr><tr><td>Gurjari Todi (move to Todi thaat)</td><td>Gujari Todi, Gujri Todi</td><td>Three spellings of one raag. All three entries also have wrong notes (see §2).</td></tr><tr><td>Nat Bhairav</td><td>Nata Bhairav</td><td>Same raag. Both entries have wrong notes (see §2).</td></tr><tr><td>Vibhas (Bhairav)</td><td>Bibhas (Marwa)</td><td>The Bibhas entry's notes (Sa Re(k) Pa Dha(k)) are the Bhairav-thaat Vibhas, identical to the Vibhas entry. A Marwa-thaat Bibhas exists but has shuddha Dha (Sa Re(k) Ga Pa Dha). Either delete Bibhas or give it the Marwa notes.</td></tr><tr><td>Shuddha Kalyan (add alt "Bhoop Kalyan")</td><td>Bhoop Kalyan</td><td>Most sources treat Bhoop Kalyan as another name for Shuddha Kalyan. A minority (Omkarnath Thakur's line) keeps them separate. Merge unless you want to document the minority view.</td></tr><tr><td>—</td><td>Yogi</td><td>No Hindustani raag by this name found in any reference. Its listed notes (Sa Ga(k) Ma Pa Ni(k)) are Dhani's. Recommend removal.</td></tr><tr><td>—</td><td>Mishra Bhairav, Mishra Khamaj</td><td>These are mishra (mixed) treatments used in thumri, not raags with their own grammar. Keep only if labelled as light-classical mixed forms.</td></tr></tbody></table></div>
+<p>Also: Zila Kafi sits under the <code>// Khamaj Thaat</code> comment block in <code>data.js</code> but has <code>thaat: "Kafi"</code>. Move it.</p>
+<h2>2. Wrong notes or wrong thaat</h2>
+<p>These are the changes that matter most. The current entry would mislead a student.</p>
+<h3>Kalyan thaat</h3>
+<p><b>Gorakh Kalyan</b> — currently a Yaman clone (Kalyan thaat, tivra Ma). Wrong.</p>
+<ul><li>Thaat: <b>Khamaj</b> (Bhatkhande; some say Kafi). Not Kalyan despite the name.</li><li>Swaras: Sa Re Ma Pa Dha Ni(k). Ga omitted. Pa weak, often only a grace note.</li><li>Aroh: Sa Re Ma Dha Sa' (Ni omitted in ascent). Avroh: Sa' Ni(k) Dha Pa Ma Re Sa.</li><li>Vadi Ma, samvadi Sa. Time: early night (9–12). App has Evening; acceptable.</li><li>Narrative: "scale similar to Yaman" is wrong. "Holds an important place in dhrupad" is unsupported. It is a khayal raag, associated with Kumar Gandharva and Bhimsen Joshi. Rewrite.</li><li>Sources: <a href="http://www.tanarang.com/english/gorakh-kalyan_eng.htm">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Gorakh_Kalyan">Wikipedia</a>, <a href="https://ragajunglism.org/ragas/gorakh-kalyan/">ragajunglism</a></li></ul>
+<p><b>Hindol</b> — "no Sa or Pa" is wrong. Hindol omits <b>Re and Pa</b>.</p>
+<ul><li>Swaras: Sa Ga Ma(t) Dha Ni. Fix <code>char</code> ("no Re or Pa"), <code>swaras</code> (add Sa), and the narrative sentence "omits both Sa and Pa".</li><li>Vadi Dha, samvadi Ga per Wikipedia; app has Ga/Ni. Sources vary; Dha/Ga is more common.</li><li>Sources: <a href="https://en.wikipedia.org/wiki/Hindol">Wikipedia</a>, <a href="https://www.swarganga.org/raags/76/Hindol">swarganga</a></li></ul>
+<p><b>Kamod</b> — tivra Ma is missing entirely. Kamod uses both Ma; tivra Ma appears in the phrase Ma(t) Pa Dha Pa.</p>
+<ul><li>Swaras: Sa Re Ga Ma Ma(t) Pa Dha Ni.</li><li>Aroh: Sa Re Pa, Ga Ma Pa Dha Pa, Sa'. Avroh: Sa' Ni Dha Pa, Ga Ma Pa Ga Ma Re Sa.</li><li>Raag-vachak phrase: Ga Ma Pa Ga Ma Re Sa and the Re–Pa sangati. Add to narrative.</li><li>Vadi Pa, samvadi Re: correct.</li><li>Sources: <a href="https://tanarang.com/raag-kamod/">tanarang</a>, <a href="https://www.parrikar.org/hindustani/kamod/">Parrikar</a></li></ul>
+<p><b>Shuddha Kalyan</b> — aroh is wrong and the narrative's distinction from Yaman Kalyan is wrong.</p>
+<ul><li>Aroh is pentatonic: Sa Re Ga Pa Dha Sa' (same as Bhoop). Avroh: Sa' Ni Dha Pa Ma(t) Ga Re Sa. Ma(t) and Ni appear only in descent, reached by meend (Sa'→Dha, Pa→Ga).</li><li>Narrative currently says it "uses only tivra Ma throughout" as its defining feature. The defining feature is the Bhoop ascent with Ni and Ma(t) added in descent as meend.</li><li>Sources: <a href="https://chandrakantha.com/music-and-dance/i-class-music/index-of-rags/rag-shuddha-kalyan/">chandrakantha</a>, <a href="https://tanarang.com/raag-shuddha-kalyan-2/">tanarang</a>, <a href="https://ragajunglism.org/ragas/shuddha-kalyan/">ragajunglism</a></li></ul>
+<p><b>Hameer</b> — Ma usage is backwards and the aroh is wrong.</p>
+<ul><li>Shuddha Ma is primary. Tivra Ma appears in descent in the phrase Pa Ma(t) Pa (or Ma(t) Pa Dha Pa), not in ascent.</li><li>Aroh: Sa Re Ga Ma Dha Ni Sa' (Pa skipped, not Re and Ma). Avroh: Sa' Ni Dha Pa, Ma(t) Pa Ga Ma Re Sa.</li><li>Narrative says "tivra in ascent and shuddha in descent" and "skips Re and Ma". Both wrong.</li><li>Time: 2nd prahar of night (9–12). App says "Late night". Change to "Night".</li><li>Sources: <a href="https://www.parrikar.org/hindustani/hameer/">Parrikar</a>, <a href="https://en.wikipedia.org/wiki/Hameer">Wikipedia</a>, <a href="https://tanarang.com/raag-hameer/">tanarang</a></li></ul>
+<p><b>Nand</b> — Re is omitted in aroh; app's aroh is a straight Yaman scale.</p>
+<ul><li>Aroh: Sa Ga Ma Pa, Dha Pa Ni Sa' (Re varjit in ascent; shuddha Ma primary, Ma(t) as a touch in Ma(t) Pa Dha Pa). Avroh: Sa' Ni Dha Pa, Ma(t) Pa Dha Pa Ma Ga, Ma Re Sa.</li><li>Vadi/samvadi: app has Ga/Ni. tanarang does not give one; other sources give Sa/Pa. Mark unverified.</li><li>Source: <a href="https://tanarang.com/raag-nand/">tanarang</a></li></ul>
+<p><b>Kedar</b> — <code>swaras</code> field omits Re and Ga but the avroh uses them. Inconsistent.</p>
+<ul><li>Swaras: Sa Re Ga Ma Ma(t) Pa Dha Ni, with Re and Ga weak and absent in ascent.</li><li>Aroh: Sa Ma, Ma Pa, Dha Pa, Ni Dha Sa'. Vadi Ma, samvadi Sa: correct.</li><li>Source: <a href="https://en.wikipedia.org/wiki/Kedar_(raga">Wikipedia</a>)</li></ul>
+<h3>Bilawal thaat</h3>
+<p><b>Alhaiya Bilawal</b> — komal Ni is missing. It is the defining note of this raag.</p>
+<ul><li>Aroh: Sa Re Ga Pa Dha Ni Sa' (Ma varjit in ascent). Avroh: Sa' Ni Dha Ni(k) Dha Pa, Ma Ga Re Sa.</li><li>Narrative: "takes its name from the legendary warrior Alha" is unsupported. The name Alhaiya is attested in 16th-century texts (Lochan, Hridaya Narayanadeva). Drop the Alha claim.</li><li>Sources: <a href="https://tanarang.com/raag-alhaiya-bilawal/">tanarang</a>, <a href="https://ragajunglism.org/ragas/alhaiya-bilawal/">ragajunglism</a>, <a href="https://en.wikipedia.org/wiki/Alhaiya_Bilaval">Wikipedia</a></li></ul>
+<p><b>Bihag</b> — Re and Dha are dropped entirely. They are weak, not absent.</p>
+<ul><li>Avroh: Sa' Ni Dha Pa, Ma(t) Pa, Ga Ma Ga, Re Sa. Add Re and Dha to <code>swaras</code> with a note that they are varjit in ascent.</li><li>Source: <a href="https://en.wikipedia.org/wiki/Bihag">Wikipedia</a></li></ul>
+<p><b>Nat Bilawal</b> — time should be <b>Morning</b> (Bilawal-ang raag), not Evening.</p>
+<p><b>Charukeshi</b> — thaat Bilawal is wrong. Charukeshi (Sa Re Ga Ma Pa Dha(k) Ni(k)) is a Carnatic import that fits none of the 10 thaats. Change thaat to a "Carnatic / no thaat" bucket. Notes in app are correct.</p>
+<ul><li>Sources: <a href="https://tanarang.com/raag-charukeshi/">tanarang</a>, <a href="https://ragajunglism.org/ragas/charukeshi/">ragajunglism</a></li></ul>
+<p><b>Saraswati</b> — entry describes a different raag. The Hindustani Saraswati (Carnatic import) is:</p>
+<ul><li>Swaras: Sa Re Ma(t) Pa Dha Ni(k). Ga omitted. Vadi Pa, samvadi Re. Time: night (till midnight). Not a Bilawal-thaat morning raag.</li><li>Narrative ("pure, scholarly, invokes the goddess", "morning prayers") should be rewritten.</li><li>Source: <a href="https://tanarang.com/raag-saraswati/">tanarang</a></li></ul>
+<p><b>Durga</b> — vadi Ma, samvadi Sa (app has Re/Pa). Notes correct.</p>
+<h3>Khamaj thaat</h3>
+<p><b>Des / Desh</b> — merge, then fix: aroh uses <b>shuddha Ni</b> (Sa Re Ma Pa Ni Sa'); komal Ni only in avroh. App has Ni(k) in aroh. Vadi Re, samvadi Pa (app has them reversed).</p>
+<ul><li>Sources: <a href="https://www.parrikar.org/hindustani/des/">Parrikar</a>, <a href="https://en.wikipedia.org/wiki/Desh_(raga">Wikipedia</a>)</li></ul>
+<p><b>Tilak Kamod</b> — uses <b>shuddha Ni</b>; komal Ni is only an occasional touch. App has Ni(k) throughout. Dha varjit in aroh. Vadi Re, samvadi Pa (app reversed).</p>
+<ul><li>Aroh: Pa' Ni' Sa Re Ga Sa, Re Ma Pa Ni Sa'. Avroh: Sa' Pa Dha Ma Ga, Sa Re Ga Sa.</li><li>Sources: <a href="https://en.wikipedia.org/wiki/Tilak_Kamod">Wikipedia</a>, <a href="https://tanarang.com/raag-tilak-kamod/">tanarang</a></li></ul>
+<p><b>Khamaj</b> — Re is varjit in aroh, and shuddha Ni is used in aroh (komal in avroh). App aroh has Re and no Ni.</p>
+<ul><li>Aroh: Sa Ga Ma Pa Dha Ni Sa'. Avroh: Sa' Ni(k) Dha Pa Ma Ga Re Sa.</li><li>Source: <a href="https://en.wikipedia.org/wiki/Khamaj">Wikipedia</a></li></ul>
+<p><b>Rageshri</b> — Pa is varjit in aroh (app has it). Aroh: Sa Ga Ma Dha Ni(k) Sa'. Vadi Ga, samvadi Ni: correct.</p>
+<ul><li>Source: <a href="https://en.wikipedia.org/wiki/Rageshree">Wikipedia</a></li></ul>
+<p><b>Pahadi</b> — thaat is <b>Bilawal</b> (all shuddha), not Khamaj. Time: evening.</p>
+<ul><li>Source: <a href="https://soundofindia.com/raagas/pahadi">soundofindia</a></li></ul>
+<p><b>Mand</b> — thaat is <b>Bilawal</b>, all shuddha swaras. App has Khamaj with komal Ni.</p>
+<ul><li>Source: <a href="https://ragajunglism.org/ragas/mand/">ragajunglism</a></li></ul>
+<p><b>Jog</b> — thaat "Mixed" should be <b>Khamaj</b>. Uses both Ga: shuddha in aroh, komal in avroh, plus komal Ni. "Combines Bhairavi and Kafi phrases" is wrong.</p>
+<ul><li>Aroh: Sa Ga Ma Pa Ni(k) Sa'. Avroh: Sa' Ni(k) Pa Ma Ga Ma Ga(k) Sa. Vadi/samvadi in app (Ga(k)/Pa) unverified; most sources give Ma/Sa.</li><li>Source: <a href="https://tanarang.com/raag-jog/">tanarang</a></li></ul>
+<h3>Bhairav thaat</h3>
+<p><b>Nat Bhairav / Nata Bhairav</b> — merge, then fix: Nat Bhairav has <b>shuddha Re and komal Dha</b> (Sa Re Ga Ma Pa Dha(k) Ni). App has komal Re, shuddha Dha in both entries, which is the reverse.</p>
+<ul><li>Source: <a href="https://learnraga.com/ragas/nat-bhairav">learnraga</a></li></ul>
+<p><b>Lalit</b> — thaat Bhairav is wrong. With komal Dha (as in the app's notes, and as performed today) it is <b>Purvi</b> thaat. With shuddha Dha (Bhatkhande's form) it is Marwa. Vadi is shuddha Ma (app says Ma(t)); samvadi Sa.</p>
+<ul><li>Sources: <a href="https://tanarang.com/raag-lalit/">tanarang</a>, <a href="https://ragajunglism.org/ragas/lalit/">ragajunglism</a></li></ul>
+<p><b>Ramkali</b> — missing its two identifying notes. Ramkali is Bhairav plus <b>tivra Ma and komal Ni</b> in the descent phrase Ma(t) Pa Dha(k) Ni(k) Dha(k) Pa. Vadi Pa, samvadi Sa (app Ga/Ni).</p>
+<ul><li>Aroh: Sa Ga Ma Pa Dha(k) Ni Sa'. Avroh: Sa' Ni Dha(k) Pa, Ma(t) Pa Dha(k) Ni(k) Dha(k) Pa, Ga Ma Re(k) Sa.</li><li>Sources: <a href="https://tanarang.com/raag-ramkali/">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Ramkali">Wikipedia</a></li></ul>
+<p><b>Gurjari Todi</b> (Bhairav section) — wrong thaat and wrong notes. See Todi section below; delete this entry and fix the Todi one.</p>
+<p><b>Lalita Gauri</b> — wrong thaat, time and notes. It is a <b>Purvi-ang jod raag</b> (Lalit + Gauri) created by Kesarbai Kerkar. Uses both Ma, komal Re, komal Dha (some use shuddha Dha). Time: evening / sunset, not dawn.</p>
+<ul><li>Aroh: Sa Re(k) Ga Ma, Ma(t) Ma Ga, Pa Dha(k) Ni Sa'. Avroh: Sa' Ni Dha(k) Pa, Dha(k) Ma(t), Ma, Ga, Ma(t) Re(k) Sa.</li><li>Sources: <a href="https://www.parrikar.org/hindustani/lalitagouri/">Parrikar</a>, <a href="https://profmilindmalshe.in/2020/09/27/raag-lalita-gauri/">Milind Malshe</a></li></ul>
+<p><b>Bhairav Bahar</b> — a jod raag, not a scale. App's scale (komal Re, shuddha Dha, komal Ni) does not describe it. It combines Bhairav's poorvang (Sa Re(k) Ga Ma) with Bahar's uttarang (Pa Ga(k) Ma Ni(k) Dha Ni Sa'). Low priority, but the current notes are not a real form.</p>
+<h3>Bhairavi / Todi thaats</h3>
+<p><b>Bilaskhani Todi</b> — thaat is <b>Bhairavi</b>, not Todi, and Ma is <b>shuddha</b>, not tivra.</p>
+<ul><li>Swaras: Sa Re(k) Ga(k) Ma Pa Dha(k) Ni(k). Aroh: Sa Re(k) Ga(k) Pa Dha(k) Sa' (Ma, Ni varjit in ascent). Avroh: Re(k)' Ni(k) Dha(k) Pa, Ma Ga(k) Re(k) Sa. Vadi Dha(k), samvadi Ga(k).</li><li>The Bilas Khan legend in the narrative is fine.</li><li>Sources: <a href="https://tanarang.com/raag-bilaskhani-todi/">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Bilaskhani_Todi">Wikipedia</a></li></ul>
+<p><b>Bhupali Todi</b> (Bhupal Todi) — notes are entirely wrong. It is pentatonic <b>Sa Re(k) Ga(k) Pa Dha(k)</b>: no Ma, no Ni. App has Ma(t) and Ni and omits Pa. Thaat Bhairavi (conventional) or Todi-ang.</p>
+<ul><li>Sources: <a href="https://tanarang.com/raag-bhupal-todi/">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Bhupal_Todi">Wikipedia</a></li></ul>
+<p><b>Gurjari Todi</b> (single merged entry) — <b>Pa is varjit</b>. All three app entries include Pa; the Bhairav-section one also has shuddha Ma and shuddha Ga.</p>
+<ul><li>Swaras: Sa Re(k) Ga(k) Ma(t) Dha(k) Ni. Aroh: Sa Re(k) Ga(k) Ma(t) Dha(k) Ni Sa'. Avroh: Sa' Ni Dha(k) Ma(t) Ga(k) Re(k) Sa. Vadi Dha(k), samvadi Re(k). Late morning.</li><li>Sources: <a href="https://en.wikipedia.org/wiki/Gurjari_(raga">Wikipedia</a>), <a href="https://ragajunglism.org/ragas/gujiri-todi/">ragajunglism</a></li></ul>
+<p><b>Multani</b> — aroh omits Re and Dha: Ni' Sa Ga(k) Ma(t) Pa Ni Sa'. Vadi Pa, samvadi Sa (app Ma(t)/Sa).</p>
+<ul><li>Source: <a href="https://en.wikipedia.org/wiki/Multani_(raga">Wikipedia</a>)</li></ul>
+<p><b>Madhuvanti</b> — aroh omits Re and Dha: Ni' Sa Ga(k) Ma(t) Pa Ni Sa'. Vadi Pa, samvadi Sa (app Ga(k)/Ni). Time: late afternoon to early evening (4–8 pm). Thaat Todi is the conventional assignment though the notes (shuddha Re, Dha) do not fit; keep but note it.</p>
+<ul><li>Sources: <a href="https://tanarang.com/raag-madhuvanti/">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Madhuvanti">Wikipedia</a></li></ul>
+<p><b>Chandrakauns</b> — two errors. It omits <b>Re and Pa</b> (not Re and Dha), and Ni is <b>shuddha</b>. App has Ni(k), which makes the entry identical to Malkauns. The shuddha Ni is the whole point of the raag.</p>
+<ul><li>Swaras: Sa Ga(k) Ma Dha(k) Ni. Fix <code>char</code>, <code>swaras</code>, aroh, avroh, and the narrative. Thaat: fits none of the 10 cleanly; app's "Kafi" is defensible only by convention.</li><li>Sources: <a href="https://en.wikipedia.org/wiki/Chandrakauns">Wikipedia</a>, <a href="https://raga.one/raag-chandrakauns/">raga.one</a></li></ul>
+<h3>Kafi thaat</h3>
+<p><b>Bageshri</b> — Dha is <b>shuddha</b>, not komal. Aroh omits Re and Pa: Sa Ga(k) Ma Dha Ni(k) Sa'. Avroh: Sa' Ni(k) Dha, Ma Pa Dha Ma Ga(k) Re Sa. Vadi Ma, samvadi Sa (app Ga(k)/Ni(k)).</p>
+<ul><li>Sources: <a href="https://www.parrikar.org/hindustani/bageshree/">Parrikar</a>, <a href="https://www.hindustaniclassical.com/article/raga-bageshri">hindustaniclassical.com</a></li></ul>
+<p><b>Patdeep</b> — Ni is <b>shuddha</b>. That is what distinguishes it from Bhimpalasi. App has Ni(k). Aroh: Ni' Sa Ga(k) Ma Pa Ni Sa'. Avroh: Sa' Ni Dha Pa, Ma Pa Ga(k), Ma Ga(k) Re Sa. Vadi Pa, samvadi Sa (app Pa/Re).</p>
+<ul><li>Sources: <a href="https://tanarang.com/raag-patdeep/">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Patdeep">Wikipedia</a></li></ul>
+<p><b>Bhimpalasi</b> — vadi Ma, samvadi Sa (app Ga(k)/Ni(k)). Notes correct.</p>
+<p><b>Sur Malhar</b> — Dha is <b>shuddha</b> (app komal). Aroh is Sarang-ang: Sa Re Ma Pa Ni Sa'; komal Ga only in avroh. Malhar-ang phrase Ma Re Pa, Ma Pa Ni(k) Dha Pa.</p>
+<ul><li>Source: <a href="https://tanarang.com/raag-surdasi-malhar/">tanarang</a></li></ul>
+<p><b>Gaud Malhar</b> — Ga is <b>shuddha</b> (app komal). Thaat: Bilawal (Wikipedia) or Khamaj; not Kafi. Vadi Ma, samvadi Sa (app Pa/Re).</p>
+<ul><li>Aroh: Sa Re Ga Ma Re Pa, Ma Pa Dha Ni Sa'. Avroh: Sa' Dha Ni(k) Pa Ma Ga Ma Re Sa.</li><li>Sources: <a href="https://en.wikipedia.org/wiki/Gaud_Malhar">Wikipedia</a>, <a href="https://tanarang.com/raag-gaud-malhar/">tanarang</a></li></ul>
+<p><b>Miyan ki Malhar</b> — vadi Ma, samvadi Sa (app Ni/Pa). Notes correct. Add: Ga omitted in aroh, Dha omitted in avroh; the Ni(k) Dha Ni Sa' double-Ni phrase is the signature.</p>
+<ul><li>Source: <a href="https://tanarang.com/raag-malhar-raag-miya-malhar/">tanarang</a></li></ul>
+<p><b>Shuddha Sarang</b> — tivra Ma is missing, and thaat should be <b>Kalyan</b> (Bhatkhande put it in Kafi; modern texts Kalyan).</p>
+<ul><li>Aroh: Ni' Sa Re Ma(t) Pa Ni Sa'. Avroh: Sa' Ni Dha Pa Ma(t) Pa Ma Re Ni' Sa. Signature: Ma(t) Ma Re.</li><li>Sources: <a href="https://tanarang.com/raag-shuddha-sarang/">tanarang</a>, <a href="https://www.parrikar.org/hindustani/sarang/">Parrikar</a></li></ul>
+<p><b>Gaur Sarang</b> — wrong thaat and wrong notes. It is <b>Kalyan</b> thaat, sampoorna and vakra, using both Ma and Ga (app omits Ga and Ma(t)). Vadi Ga, samvadi Dha (app Re/Pa). Early afternoon.</p>
+<ul><li>Aroh: Sa Ga Re Ma Ga Pa Ma(t) Dha Pa Ni Dha Sa'. Avroh: Sa' Dha Ni Pa Dha Ma(t) Pa Ga Ma Re Pa Re Sa. Raag-vachak: Ga Re Ma(t) Ga Pa Re Sa.</li><li>Sources: <a href="https://en.wikipedia.org/wiki/Gaud_Sarang">Wikipedia</a>, <a href="https://tanarang.com/raag-gaud-sarang/">tanarang</a></li></ul>
+<p><b>Vrindavani Sarang</b> — uses <b>both Ni</b>: shuddha in aroh, komal in avroh. App has shuddha only. Merge Brindavani Sarang into this.</p>
+<ul><li>Sources: <a href="https://en.wikipedia.org/wiki/Brindavani_Sarang">Wikipedia</a>, <a href="https://tanarang.com/raag-sarang-raag-brindavani-sarang/">tanarang</a></li></ul>
+<p><b>Madhyamad Sarang</b> — same scale as Vrindavani but with <b>komal Ni only</b>. App has shuddha Ni. Fix, and say in the narrative that it differs from Vrindavani only in the Ni.</p>
+<p><b>Bahar</b> — uses both Ni (app komal only). Vadi Ma, samvadi Sa (app Ga(k)/Ni(k)). Aroh: Sa Ma, Pa Ga(k) Ma, Dha Ni Sa'.</p>
+<ul><li>Sources: <a href="https://en.wikipedia.org/wiki/Bahar_(raga">Wikipedia</a>), <a href="https://www.indianclassicalmusic.com/bahar">indianclassicalmusic.com</a></li></ul>
+<p><b>Nayaki Kanada</b> — Dha is omitted in most renderings (app has Dha(k) in both directions). Aroh phrases: Sa Re Ga(k) Ma, Ma Pa Ni(k) Pa Sa'. Avroh: Sa' Ni(k) Pa, Ma Pa Ga(k) Ma Re Sa.</p>
+<ul><li>Source: <a href="https://tanarang.com/raag-nayaki-kanada/">tanarang</a></li></ul>
+<h3>Asavari thaat</h3>
+<p><b>Komal Rishabh Asavari</b> — thaat is <b>Bhairavi</b> (komal Re rules it out of Asavari). Notes and vadi/samvadi correct.</p>
+<ul><li>Sources: <a href="https://en.wikipedia.org/wiki/Komal_Rishabh_Asavari">Wikipedia</a>, <a href="https://tanarang.com/raag-komal-rishabh-asawari/">tanarang</a></li></ul>
+<p><b>Kirwani</b> — Ni is <b>shuddha</b> (harmonic minor: Sa Re Ga(k) Ma Pa Dha(k) Ni). App has Ni(k) and shuddha Ga, which is neither Kirwani nor harmonic minor. Thaat: fits none of the 10; not Asavari.</p>
+<ul><li>Sources: <a href="https://en.wikipedia.org/wiki/Kirwani">Wikipedia</a>, <a href="https://ragajunglism.org/ragas/kirwani/">ragajunglism</a></li></ul>
+<p><b>Adana</b> — vadi Sa, samvadi Pa (app Pa/Re). Aroh uses komal Ni primarily; shuddha Ni sparingly. Minor.</p>
+<ul><li>Source: <a href="https://en.wikipedia.org/wiki/Adana_(raga">Wikipedia</a>)</li></ul>
+<p><b>Jaunpuri</b> — vadi Dha(k), samvadi Ga(k) (app Ga(k)/Ni(k)). Minor.</p>
+<h3>Purvi / Marwa thaats</h3>
+<p><b>Sohini</b> — notes wrong and time wrong. <b>Pa is varjit; Dha is present and is the vadi.</b> App omits Dha and includes Pa.</p>
+<ul><li>Swaras: Sa Re(k) Ga Ma(t) Dha Ni. Aroh: Sa Ga Ma(t) Dha Ni Sa'. Avroh: Sa' Ni Dha, Ga Ma(t) Dha Ga Ma(t) Ga Re(k) Sa. Vadi Dha, samvadi Ga.</li><li>Time: last prahar of night (3–6 am). App says Night. Change to Pre-dawn.</li><li>Sources: <a href="https://tanarang.com/raag-sohani/">tanarang</a>, <a href="https://ragajunglism.org/ragas/sohini/">ragajunglism</a></li></ul>
+<p><b>Basant</b> — vadi Sa, samvadi Pa (app Ga/Ni). Both Ma are used in some traditions (tanarang); Wikipedia gives tivra only. Aroh: Sa Ga Ma(t) Dha(k) Ni Sa'.</p>
+<ul><li>Sources: <a href="https://en.wikipedia.org/wiki/Basant_(raga">Wikipedia</a>), <a href="https://tanarang.com/raag-basant/">tanarang</a></li></ul>
+<p><b>Bhatiyar</b> — vadi Ma (shuddha), samvadi Sa (app Ga/Ni). Uses both Ma with shuddha Ma prominent; app has tivra only. Aroh: Sa Ma, Pa Ga, Ma(t) Dha Sa'. Thaat Marwa: correct.</p>
+<ul><li>Sources: <a href="https://tanarang.com/raag-bhatiyar/">tanarang</a>, <a href="https://en.wikipedia.org/wiki/Bhatiyar">Wikipedia</a></li></ul>
+<p><b>Puriya Dhanashri</b> — vadi Pa, samvadi Re(k) (app Ga/Ni). Pa is weak in aroh: Ni' Re(k) Ga Ma(t) Dha(k) Ni Sa'.</p>
+<ul><li>Sources: <a href="https://en.wikipedia.org/wiki/Puriya_Dhanashree">Wikipedia</a>, <a href="https://tanarang.com/raag-puriya-dhanashree/">tanarang</a></li></ul>
+<p><b>Shree</b> — avroh omits Dha(k) and Ga, which are present: Sa' Ni Dha(k) Pa, Ma(t) Ga Re(k) Sa. <code>swaras</code> should list all seven with Ga and Dha weak. Vadi Re(k), samvadi Pa: correct.</p>
+<p><b>Paraj</b> — time is last prahar of night (pre-dawn), not "Late night". Minor.</p>
+<h2>3. Time-of-day corrections</h2>
+<div class="table-wrap"><table><thead><tr><th>Raag</th><th>App</th><th>Should be</th></tr></thead><tbody><tr><td>Hameer</td><td>Late night</td><td>Night (9–12)</td></tr><tr><td>Sohini</td><td>Night</td><td>Pre-dawn (3–6)</td></tr><tr><td>Nat Bilawal</td><td>Evening</td><td>Morning</td></tr><tr><td>Saraswati</td><td>Morning</td><td>Night</td></tr><tr><td>Lalita Gauri</td><td>Dawn</td><td>Evening / sunset</td></tr><tr><td>Madhuvanti</td><td>Afternoon</td><td>Late afternoon (4–8 pm)</td></tr><tr><td>Paraj</td><td>Late night</td><td>Pre-dawn</td></tr></tbody></table></div>
+<p>Everything else checked matched at least one reference.</p>
+<h2>4. Seasons</h2>
+<p>The <code>season</code> field is the weakest data in the app. Standard theory ties season to only two families:</p>
+<ul><li><b>Monsoon</b>: Megh, Miyan ki Malhar, Gaud Malhar, Nat Malhar, Sur Malhar. Des is a common but informal association. Keep.</li><li><b>Spring</b>: Basant, Bahar, Hindol, Bhairav Bahar. Kafi (via Holi/hori) is a soft association. Keep.</li></ul>
+<p>Not supported by any reference and recommended to change to "Any":</p>
+<ul><li>Winter: Bhairav, Lalit, Jogiya, Miyan ki Todi, Bhatiyar, Bibhas.</li><li>Autumn: Purvi, Shree, Marwa.</li><li>Summer: Bhimpalasi, Patdeep, Multani, Madhuvanti, all five Sarangs.</li></ul>
+<p>The "hot afternoon" framing of the Sarangs and Bhimpalasi is a poetic gloss on their time of day, not a season. If you want to keep it, label the field "association" and make it clear in the UI that it is not a rule.</p>
+<p>Narratives that lean on the invented season should lose that clause: Bhairav ("especially powerful in winter dawn"), Lalit ("winter pre-dawn"), Jogiya, Miyan ki Todi ("winter morning"), Purvi and Shree ("autumn"), Marwa ("autumn twilight"), Bhatiyar, Bibhas, Multani, Madhuvanti, Bhimpalasi, Patdeep.</p>
+<h2>5. Narrative claims to correct</h2>
+<ul><li><b>Yaman</b>: "The Gwalior gharana traditionally begins the arohana from Ni in the lower octave" — the Ni' Re Ga start is universal in Yaman, not a Gwalior trait. "Some older treatises and the Agra gharana treat the vadi as Ga while others assign it to Ni — the Ga vadi is now the accepted standard" contradicts itself. Replace with: Bhatkhande gives Ga/Ni; a minority gives Ni/Ga.</li><li><b>Alhaiya Bilawal</b>: drop the warrior-Alha etymology (see §2).</li><li><b>Gorakh Kalyan</b>: drop "important in dhrupad", drop "scale similar to Yaman" (see §2).</li><li><b>Jog</b>: drop "combines Bhairavi and Kafi phrases".</li><li><b>Shuddha Kalyan</b>: rewrite the distinction from Yaman Kalyan (see §2).</li><li><b>Hameer</b>: fix Ma direction and the "skips Re and Ma" claim (see §2).</li><li><b>Chandrakauns</b>: fix "no Re or Dha" and add that shuddha Ni is what separates it from Malkauns.</li><li><b>Hindol</b>: fix "omits both Sa and Pa".</li><li><b>Malkauns</b> ras: "Raudra" is unusual. Most sources describe it as Shanta / Bhakti / Veer. Taste call; flag only.</li><li><b>Kalingada</b> "rare": it is common in Punjab and in thumri/light forms. Soften.</li><li><b>Bilaskhani Todi</b> legend: fine. Fix the thaat sentence around it.</li></ul>
+<h2>6. Verified as correct (no change needed)</h2>
+<p>Yaman, Yaman Kalyan, Bhoopali, Deshkar, Bilawal, Hansadhwani (vadi varies by source; app's Ga/Ni is one reading), Shankara, Devgiri Bilawal, Jhinjhoti, Tilang, Zila Kafi (apart from the comment-block placement), Bhairav, Ahir Bhairav, Vibhas, Kalingada (notes), Jogiya, Bairagi, Bhairavi, Sindhu Bhairavi, Malkauns (notes), Sampoorna Malkauns, Kafi, Dhani, Megh, Nat Malhar, Pilu, Asavari, Darbari Kanada, Gandhari (notes; vadi varies), Miyan ki Todi, Shuddha Todi, Purvi, Puriya, Marwa.</p>
+<h2>7. Suggested order of work</h2>
+<ol><li>Merge duplicates and delete Yogi (§1). Nine entries removed, 88 remain.</li><li>Fix the note-level errors that change the raag's identity: Chandrakauns, Patdeep, Bageshri, Kirwani, Sohini, Bhupali Todi, Gurjari Todi, Bilaskhani Todi, Gorakh Kalyan, Saraswati, Nat Bhairav, Lalita Gauri, Gaur Sarang, Shuddha Sarang, Gaud Malhar, Sur Malhar.</li><li>Fix thaat labels: Komal Rishabh Asavari, Lalit, Jog, Pahadi, Mand, Charukeshi, Kirwani, Bilaskhani Todi, Gurjari Todi, Gorakh Kalyan, Shuddha Sarang, Gaur Sarang, Gaud Malhar. Consider adding a "No thaat / Carnatic import" value for Charukeshi, Kirwani, Saraswati, Chandrakauns.</li><li>Add missing Ma / Ni variants: Kamod, Hameer, Nand, Alhaiya Bilawal, Ramkali, Vrindavani Sarang, Madhyamad Sarang, Bahar, Basant, Bhatiyar, Des, Tilak Kamod, Khamaj.</li><li>Fix vadi/samvadi (§2, about 20 raags).</li><li>Reset seasons (§4) and edit the narratives that depend on them.</li><li>Fix the narrative claims in §5.</li></ol>
+</div>
+
+<footer>
+  Hindustani Classical Music — Raag Compendium &nbsp;·&nbsp; Ras per Bharata Muni's Natyashastra
+  <div class="footer-links"><a href="sources.html">Sources</a> · <a href="research.html">Research notes</a> · <a href="research-evidence.html">Evidence file</a></div>
+</footer>
+</body>
+</html>
