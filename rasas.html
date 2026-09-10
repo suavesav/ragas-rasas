@@ -29,93 +29,10 @@
   Hindustani Classical Music — Raag Compendium &nbsp;·&nbsp; Ras per Bharata Muni's Natyashastra
 </footer>
 
+<script src="info.js"></script>
 <script>
-const ras = [
-  {
-    name: "Shringar",
-    sanskrit: "शृंगार",
-    meaning: "Love & Beauty",
-    color: "#e080b0",
-    deity: "Vishnu",
-    description: "The king of ras and the most musically fertile of the nine, Shringar encompasses the full spectrum of love: the joy of union (sambhoga shringar) and the ache of separation (vipralambha shringar). In Hindustani music it is omnipresent — the majority of raags carry Shringar as a primary or secondary ras, reflecting the centrality of love as the supreme aesthetic experience. Shringar is not personal longing but its distilled, universal form: beauty itself, made audible.",
-    raags: "Yaman, Bhoopali, Bageshri, Bhimpalasi, Puriya Dhanashri, and many others"
-  },
-  {
-    name: "Karuna",
-    sanskrit: "करुण",
-    meaning: "Compassion & Pathos",
-    color: "#8898e0",
-    deity: "Yama",
-    description: "The ras of grief, compassion, and pathos — and perhaps the most deeply explored ras in Hindustani music. Karuna is not personal sadness but the aesthetic experience of sorrow rendered universal: the listener does not weep for themselves but touches the fundamental human condition of loss. The dawn hours are Karuna's domain, and the great morning raags — Todi, Bhairav, Bhairavi, Darbari — are among the most profound expressions of this ras in any musical tradition.",
-    raags: "Miyan ki Todi, Bhairav, Darbari Kanada, Bhairavi, Bilaskhani Todi, Lalit"
-  },
-  {
-    name: "Shanta",
-    sanskrit: "शान्त",
-    meaning: "Peace & Serenity",
-    color: "#80c080",
-    deity: "Vishnu / Narayana",
-    description: "The ninth and highest ras, added by the Kashmiri philosopher Abhinavagupta to Bharata's original eight. Shanta represents not the absence of emotion but its transcendence — the peace that lies beyond all striving, the stillness at the heart of all movement. In music, Shanta raags carry a sattvic clarity that neither excites nor depresses but simply opens. Abhinavagupta argued that Shanta is the foundational ras from which all others arise and into which all finally dissolve.",
-    raags: "Bhoopali, Durga, Shuddha Kalyan, Ramkali, Vibhas, Bairagi"
-  },
-  {
-    name: "Raudra",
-    sanskrit: "रौद्र",
-    meaning: "Fury & Ferocity",
-    color: "#e07060",
-    deity: "Rudra (Shiva)",
-    description: "The ras of righteous fury, ferocity, and the terrifying aspect of divine power. In Hindustani music, Raudra appears less frequently than Karuna or Shringar, but where it does — in raags like Malkauns, Shankara, or Adana — it carries an unmistakable quality of compressed intensity. Raudra is not mere anger but the wrath of principle: the force that destroys in order to renew. Associated with fire, the midday sun, and Shiva in his Rudra aspect.",
-    raags: "Malkauns, Shankara, Adana, Nat Bhairav, Shree"
-  },
-  {
-    name: "Veer",
-    sanskrit: "वीर",
-    meaning: "Heroism & Courage",
-    color: "#e09840",
-    deity: "Indra",
-    description: "The ras of heroism, nobility, and courageous action. Veer in music is not aggression but elevation — the calm confidence of one who acts from principle rather than passion. Raags with Veer ras tend to have strong, direct phrase movements, bold interval leaps, and a quality of unstoppable forward momentum. The Veer ras is associated with the saffron color, the season of spring, and compositions celebrating great deeds and righteous enterprise.",
-    raags: "Hameer, Darbari Kanada, Adana, Nat Bilawal, Nat Malhar"
-  },
-  {
-    name: "Adbhuta",
-    sanskrit: "अद्भुत",
-    meaning: "Wonder & Mystery",
-    color: "#b080e0",
-    deity: "Brahma",
-    description: "The ras of wonder, the marvelous, and the mysteriously beautiful. Adbhuta is the aesthetic experience of encountering something that exceeds ordinary understanding — not fear but the sublime. In Hindustani music it appears most vividly in the monsoon raags, the pentatonic raags that omit Pa (like Chandrakauns and Lalit), and the great twilight raags like Marwa and Puriya where tonal resolution is deliberately withheld. Adbhuta raags seem to open onto something vast and unnamed.",
-    raags: "Marwa, Lalit, Chandrakauns, Miyan ki Malhar, Megh, Puriya"
-  },
-  {
-    name: "Hasya",
-    sanskrit: "हास्य",
-    meaning: "Joy & Humor",
-    color: "#d0b050",
-    deity: "Pramatha",
-    description: "The ras of joy, lightness, and laughter — from gentle humor to pure exuberance. In Hindustani music Hasya manifests as rhythmic playfulness, folk-tinged buoyancy, and the festive energy of seasonal celebrations. The spring raags (Bahar, Hindol, Basant) and the folk-influenced thumri raags carry the most Hasya, reflecting the ras's close association with the outdoor world, folk music, and communal celebration. Hasya raags tend toward pentatonic scales and simple, direct phrase movements.",
-    raags: "Hindol, Bahar, Basant, Kamod, Hansadhwani, Vrindavani Sarang"
-  },
-  {
-    name: "Bhayanaka",
-    sanskrit: "भयानक",
-    meaning: "Fear & Dread",
-    color: "#50b0a0",
-    deity: "Yama / Kala",
-    description: "The ras of fear, dread, and the uncanny. In its refined musical form, Bhayanaka is not mere fright but the profound unease of encountering the vast, the dark, and the incomprehensible — the eerie stillness of pre-dawn, the approaching monsoon storm, the ascetic silence that borders on the supernatural. Raags carrying Bhayanaka tend to use sparse textures, unusual omissions of stable swaras, and the particular quality of emptiness that creates unease in the listener.",
-    raags: "Lalit, Jogiya, Gandhari, Yogi, Malkauns"
-  },
-  {
-    name: "Bibhatsa",
-    sanskrit: "बीभत्स",
-    meaning: "Disgust & Aversion",
-    color: "#909090",
-    deity: "Shiva / Mahakala",
-    description: "The rarest of the nine ras in classical music, Bibhatsa represents disgust, aversion, and the turning away from the impure or excessive. In its highest aesthetic form, Bibhatsa is not revulsion but the renunciate's clear-eyed rejection of all that obscures — a kind of austere discrimination. It appears fleetingly in raags that touch on dissolution, darkness, and the limits of the musically beautiful, and its presence is more implied than directly expressed. Almost no raags carry it as a primary ras.",
-    raags: "Appears rarely, as a secondary quality in some dark, austere raags"
-  },
-];
-
 const grid = document.getElementById('ras-grid');
-ras.forEach(r => {
+rasInfo.forEach(r => {
   const card = document.createElement('div');
   card.className = 'info-card';
   card.innerHTML = `
