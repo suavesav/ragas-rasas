@@ -3,7 +3,6 @@
     { href: 'index.html',  label: 'Raags' },
     { href: 'rasas.html',  label: 'Ras' },
     { href: 'thaats.html', label: 'Thaats' },
-    { href: 'sources.html', label: 'Sources' },
   ];
 
   const current = location.pathname.split('/').pop() || 'index.html';
