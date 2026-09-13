@@ -24,7 +24,7 @@ Raw extracts per source, kept as the audit trail for docs/raag-research-round2.m
 - Gaud Malhar T: Bilawal; Ma/Sa; 9-12pm or rainy season; "vipralambh shringar"; also called Gaud.
 - Mand T: Bilawal; Sa/Pa; 9-12pm (app Any); all shuddha; light/bhajan/ghazal; Rajasthani.
 - Empirical: B99 (performer-chosen): Bhupali+Khamaj=Hasya(joy); Jogiya,Bhairavi,Bhupal Todi=Karuna; Hindol,Adana,Sohini=Raudra; Yaman Kalyan,Yaman,Bilaskhani=Shanta. M15 (122 Indian listeners): Hansadhwani,Tilak Kamod,Desh,Rageshree,Jog,Yaman = calm(alaap)/happy(gat); Malkauns=sad/longing; Marwa,Basant Mukhari,Lalit,Miyan ki Todi=sad/tensed; Shree=sad/longing.
-## Batch 2 (Khamaj/Bhairav/Purvi/Marwa) — tanarang
+## Batch 2 (Khamaj/Bhairav/Purvi/Marwa): tanarang
 - Khamaj: Khamaj; Ga/Ni; 9-12pm; aroh S G m P D N S'; "light, enthralling, not sedate; separation and union; thumri; virah".
 - Des: Khamaj; Re/Pa; 9-12pm; "very sweet; S-P and S-m bhava".
 - Tilak Kamod: Khamaj; Sa/Pa (W says Re/Pa) CONFLICT; 9-12pm; Ga,Dha varjya aroh; komal Ni rare; "Shringar, Karun or Bhakti alike; sung in rainy season".
@@ -51,7 +51,7 @@ Raw extracts per source, kept as the audit trail for docs/raag-research-round2.m
 - Poorvi: Poorvi; Ga/Ni; 3-6pm; both Ma; "heavy, Karun ras; sandhi prakash".
 - Puriya Dhanashree: Poorvi; Pa/Sa (W Pa/Re) CONFLICT; 3-6pm; "compassion, emotional".
 - Basant: Poorvi; Sa'/Pa; 9-12pm or spring; "Shringar and Virah; heavy; meend"; related Shree.
-## Batch 3 (Bhairavi/Kafi/Asavari/Todi/Carnatic) — tanarang (+W where noted)
+## Batch 3 (Bhairavi/Kafi/Asavari/Todi/Carnatic): tanarang (+W where noted)
 - Bhairavi: Bhairavi; Ma/Sa; 6-9am or sarvakalik; "queen of melodies; love and piety; sobering"; all 12 notes in practice.
 - Malkauns: Bhairavi; Ma/Sa; 12-3am; "severely tranquil; strong public appeal".
 - Bhupal Todi: Bhairavi; Dha/Ga; 6-9am; S r g P d; "spiritual purity, devotional".
@@ -131,7 +131,7 @@ Raw extracts per source, kept as the audit trail for docs/raag-research-round2.m
 - Bahar W: Kafi; Ma/Sa; mid-night or spring; "Shringara"; Amir Khusrau attribution; similar Shahana Kanada, Basant Bahar, Adana Bahar; cites RG.
 - Sindhu Bhairavi W: Asavari(!); Dha/Ga; "viraha, shoka, karuna, bhakti"; cites Oxford.
 - Bilaval W: Dha/Ga; 4-7am; "deep devotion and repose"; cites RG, Sikh enc.
-## Parrikar (P) essays batch 1 — mood/character + variants (Parrikar's guru-source is Ramashreya Jha "Ramrang"; cites Bhatkhande HSP throughout)
+## Parrikar (P) essays batch 1: mood/character + variants (Parrikar's guru-source is Ramashreya Jha "Ramrang"; cites Bhatkhande HSP throughout)
 - Yaman P: "preeminent night-time raga, considerable gravitas"; Sa,Pa skipped in aroha (N' R G, m D N); Dha never nyasa; P->R coupling via m. Yaman Kalyan: shuddha Ma like a vivadi, sandwiched between Ga's.
 - Bhairav P: "one of the noblest; solemnity and purification"; andolita r and d; Pa skipped in ascent. Variants w/ musicians: Gunakali (S r M P d), Bairagi (S r M P n, Ravi Shankar 1940s), Anand Bhairav (shuddha Dha), Saurashtra Bhairav, Mangal Bhairav, Bhatiyari Bhairav, Bhairav Bahar, Ahir Bhairav (D n r S; Amir Khan), Virat, Kabiri, Shivmat (g and n), Devata, Beehad, Prabhat (Lalit-anga), Bhavmat, Ramkali (m P d n D P), Roopkali, Hussaini, Basant Mukhari (S r G M P d n), Kaushi Bhairav, Zeelaf (S G M P d), Devaranjani, Nat Bhairav (Ravi Shankar after Deodhar; = Carnatic Sarasangi), Asa Bhairav, Jaun Bhairav, Kalingada ("flippant, less austere; no andolan; folk and bhajans"), Jogiya ("powerful madhyam; gandhar/dhaivat skipped in aroha; little Bhairavanga").
 - Bhairavi P: "born in the solemn, haunting atmosphere of the cremation grounds; deeply cherished; customary conclusion of a mehfil"; all 12 swaras with discretion = Mishra Bhairavi; Ramrang: d and G vadi/samvadi. Sindhu Bhairavi = shuddha Re shade. Bilaskhani = "horse of an entirely different colour" (Todi-anga). Others: Jangla Bhairavi, Kasuri Bhairavi.
@@ -171,7 +171,7 @@ Raw extracts per source, kept as the audit trail for docs/raag-research-round2.m
 - Maru Bihag P: Kalyan + Bihag angas; teevra Ma vs Bihag shuddha; "creation of Alladiya Khan" (Raga Darshan says descends from Maru).
 - Bihagda (Bihag + komal Ni, Khamaj-infused), Pat Bihag (chalan-bheda of Bihag; glowing shuddha Ma).
 - Hem Kalyan (all shuddha, weak Ni; "no explicit Kalyan"), Khem Kalyan (Hamsadhwani+Yaman Kalyan; Agra; "among most charming; obscure").
-## Candidate additions (tanarang T unless noted) — thaat; vadi/samvadi; time; scale; mood; related
+## Candidate additions (tanarang T unless noted): thaat; vadi/samvadi; time; scale; mood; related
 - Jaijaivanti: Kafi (P/RG: Khamaj-Des anga); Re/Pa; 9-12pm; both Ga both Ni; "sweet and touching; broad appeal; intricate"; RG entry exists. STRONG candidate (RG, T, P, W all).
 - Chhayanat (Chhayanut): Kalyan; Pa/Re; 9-12pm; both Ma; "heavy atmosphere; sweet; overpowers"; RG: "heroic (vira) sentiment; passionate warrior"; P: "rishab is lifeblood; P->R swoop". STRONG.
 - Shyam Kalyan: Kalyan; Pa/Sa; 6-9pm; both Ma, Dha varjya aroha; "very melodious; Kalyan+Kamod"; P. STRONG.
